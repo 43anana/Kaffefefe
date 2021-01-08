@@ -1,0 +1,55 @@
+@import "variables";
+@import "base";
+@import "components/hero";
+
+:root {
+--div-color: red;
+
+
+* {
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+//determine overall font stuff, ggf. anpassen von figma!!//
+//1.7 line height = 1.7 mal größer als default//
+body {
+font-family: "Roboto", sans-serif;
+font-weight:400;
+font-size: 16px;
+line-height:1.7;
+color:white;
+}
+
+//vh=vieport height//
+//IST das damit gemeint dass auf figma SCREEN HEIGHT 75% steht??//
+.header {
+height:95vh;
+background-image: url(../img/FEND-Coffee-latte-art-3.png);
+}
+
+
+.topnav {
+color:blue;
+width:375px;
+height:55px;
+}
+
+.logo {
+color:black;
+}
+
+
+scheinbar öffne ich yarn immer im projekt direkt..also im richtigen dir!!
+
+fonde es sehr unglücklich die ganze zeit px anzugebe um das genau nachzustellen..das verwirrt mich
+wie finde ich im zweifel raus auf welches parent element mein selector zugreift wenn ich position:absolute wähle ohne
+dass das vorherige absolut ist?
+<!--ok also den genauen Unterschied zw. den beiden kann ich nur mit absolute machen.das doch kacke-->
+mache ich eigentlich alles mit flexbox???
+ich muss dringend noch rausfinden wie man subpage htmls mit dem main verbindet :)
+*mein body ist linksbündig..wie ändere ich
+das..der ganze rest ist weiter mittig, damit er mittig vom header ist..
+habe ich ja auch 102 px gesetzt..aber den body will ich doch auch mittig?*/
+dinge die es safe nur einmal gibt = id?

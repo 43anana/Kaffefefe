@@ -1,0 +1,32 @@
+.address {
+    display:flex;
+    flex-direction: row;
+    margin-top:20px;
+    :first-child{
+        margin-right:17px;
+        width:156px;
+    }
+}
+
+#café-img {
+    width: 241px;
+    height:182px;
+    left:300px;
+    display:inline-flex;
+    margin-left:86px;      /*ist ja auf figma alles absolut, aber wenn ich flexboxen wollte/dürfte,
+    könnte ich es soweit nach rechts schieben, dass es ungefähr da sitzt, wo es mit absolut säße
+    gemessen an der breite von .page-content, also 110 px minus 24 (differens page-content page-outline
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25)); /*x, y, schärfe, farbe*/
+    margin-top: 40px;/*760 (höhe des img) - 720 (aka bottom des darüber liegenden divs)= 40px*/
+}
+
+#bio-text {
+    margin-top:0;
+}
+#plant-img {
+    width:241px;
+    height:160px;
+    display:inline-flex;
+    margin-left:0;
+    margin-top:44px;
+}

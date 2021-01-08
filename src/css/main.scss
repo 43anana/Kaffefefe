@@ -1,7 +1,147 @@
 @import "variables";
 @import "base";
 @import "components/hero";
+@import "_header";
+@import "_café";
+@import "_herkunft";
+@import "_shop";
 
 :root {
   --div-color: red;
 }
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body {
+  height:4030px;
+  width:375px; 
+  font-family: "Roboto", sans-serif;
+  font-weight:400;
+  font-size: 16px;
+  line-height:1.7;
+  /*padding:20px;   wozu?ausm video glaub ich*/ 
+  background-color:#fff;
+  /*border:3px solid grey; -->zum gucken ..mein body ist linksbündig..wie ändere ich 
+  das..der ganze rest ist weiter mittig, damit er mittig vom header ist.. 
+  habe ich ja auch 102 px gesetzt..aber den body will ich doch auch mittig?*/
+}  
+
+/*alle weiteren subpages*/
+
+.page-format{
+  width:596px;
+  height:875.75px;
+  position:relative;
+  top:0;
+} /*ganz ehrlich, ich hab format/bzw header (equival.) 
+jetzt nur um von dort aus outline richtig zu schieben. 
+brauch ich das überhaupt?????*/
+
+.page-outline {
+    width: 375px;
+    height: 875.75px;  /* 382 cafe + 53.75 top + 440 plant (top/bot inkl) =875.75px*/
+    position:absolute;
+    left:102px;
+    background-color:white;
+}
+
+.page-content {
+  width: 327px;
+  color:#000;
+  display:flex;
+  flex-direction: column;
+  }
+
+#café {
+  height:382px;   /*stichwort inherit:muss ich noch mal flexen, damit die children das auch tun?*/
+  position:absolute;
+  left:24px;
+  top:53.75px;
+}
+#bio {
+  height:344px;
+  position:absolute;
+  left:24px;
+  top:473.75px;  /*die höhe der #café section + position top + space(40) zwischen sections. das geht schöner!*/
+}
+
+.shop-format{
+  width:375px;
+  height:910px;
+  position:relative;
+  top:0;
+}
+.shop-outline {
+  width: 375px;
+  height: 910px;  /* 382 cafe + 53.75 top + 440 plant (top/bot inkl) =875.75px*/
+  position:absolute;
+  left:102px;
+}
+.shop-content {
+  width: 327px;
+  background-color:#1A1A1A;  /*scss einführen!!!!!!!!!!*/
+  position:absolute;
+  left:24px;
+  display:flex;
+  flex-direction: column;
+  }
+
+.shop-content2 {
+  display:flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+    > h2{
+      color:#fff;
+    }
+}
+
+.coffee-blends {
+  display:flex;
+  flex-direction:row;
+  flex-wrap: wrap;
+  color:#fff;
+}
+//fühlt sich doppelt an aber geht. warum geht snicht oben?//
+.coffee-box{
+width:155px;
+height:277px;
+}
+
+#kaffe1 {
+  height:15px;
+}
+
+#kaffe2 {
+  height:15px;
+}
+
+/*ist das was für die base?*/
+
+h2 {
+  font-weight:900;
+  font-style:normal;
+  font-size:36px;
+  line-height:34px;
+}
+
+h3 {
+  font: weight 900;
+  font-size:32px;
+  line-height:37px; /*wieso dachte ich im video gehrööt zu haben dass man da keine px angibt?..wie rechne ih das um?*/ 
+  margin-bottom:12px;
+}
+
+.text-m{
+  font-family:"Roboto", sans-serif;
+  font-weight:400;
+  font-size:14px;
+  line-height:18px;
+  color:black;
+  margin-top:20px; 
+}
+/*evt muss ich das wo anders einbauen, 
+  da bestimmt nicht alle text-m wie bei cafe nach oben 20 px haben*/

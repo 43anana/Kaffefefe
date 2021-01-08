@@ -1,21 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Index Page</title>
-    <link rel="stylesheet" href="css/main.scss" />
-    <link
-      href="https://fonts.googleapis.com/css?family=Oregano"
-      rel="stylesheet"
-    />
-  </head>
-  <body>
-    <h1>Hello World!</h1>
-    <main>
-      <a href="./my-subpage/index.html">Link to Subpage</a>
-      <div>Home</div>
-    </main>
-    <script src="js/index.js"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/main.scss" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+  <title>Rustica Bio und Fair seit 1991</title>
+  <!--brauche ich den zum Trennen: | ?-->
+  <!--<link href="https://fonts.googleapis.com/css?family=Oregano" rel="stylesheet"> -->
+</head>
+
+<body>
+  <header class="header">
+    <div class="content">
+      <nav class="topnav">
+        <div class="logobox">
+          <img class="logo" src="img/Logo.svg" alt="logo">
+        </div>
+        <div class="burgerbox">
+          <img class="burger-menu" src="img/Burger-menu.svg" alt="burger-menu">
+        </div>
+      </nav>
+      <div class="header-text">
+        <h1 class="title-primary">
+          <span class="title-primary-main">Rustica</span>
+          <span class="title-primary-sub">Bio und Fair seit 1991</span>
+        </h1>
+      </div>
+      <a class="btn btn-shop" role="button" href="my-subpage/index.html">Zum Shop</a>
+    </div>
+  </header>
+
+  <main class="page-format">
+    <!--ggf. unnötig. gibt es sowieso nur weil der header so komsich formatiert ist-->
+    <!--könnte zumindest so breit sein wie alles andere.. generelle frage der header class-->
+
+    <!--ICH GLAUB IM WAHREN LEBEN HAT CAFE HALT N EIENES INDEX UND DADURCH IST ES KEINE SECTION
+SONDERN WIE ETWA BEI SHP VORSCHAU WÄREN DANN DIE VIER KAFFEES SECTIONS-->
+
+    <!--RÖSTEREI + CAFÉ-->
+    <div class="page-outline">
+      <section class="page-content" id="café">
+        <!--lieber article?oder nur ein div?-->
+        <h2>Rösterei & Café</h2>
+        <p class="text-m">Kaffee aus Kiel, direkt gehandelt
+          und geröstet in der eigenen Rösterei, serviert im
+          gemütlichen Café in der Innenstadt.</p>
+        <div class="address text-m">
+          <p>Komm uns besuchen!
+            <br>Fraunhoferstr. 13, Kiel
+          </p>
+          <p>Mo – Fr 8–18 Uhr
+            <br>Sa 11–18 Uhr
+          </p>
+        </div>
+        <img id="café-img" alt="café-img" src="img/FEND-Coffee-shop.png">
+      </section>
+
+      <section class="page-content" id="bio">
+        <h3 class>Bio und Fair</h3>
+        <p class="text-m" id="bio-text">Weit hinten, hinter den Wortbergen, fern der Länder
+          Vokalien und Konsonantien leben die Blindtexte. Weit hinten, hinter
+          den Wortbergen, fern der Länder Vokalien und Konsonantien leben die
+          Blindtexte. Und das alles in bester Bio Qualität</p>
+        <img id="plant-img" alt="coffeeplant-img" src="img/FEND-coffee-plant.png">
+      </section>
+    </div>
+  </main>
+
+  <!--SHOP-->
+  <main class="shop-format">
+    <div class="shop-outline"> /*VERSUCH DAS WEGZULASSEN::LETS SEE-->
+      <div class="shop-content">
+        <!--das muss geiler gehen mti den ähnlichne ovn oben!-->
+        <div class="shop-content2">
+          <h2>Entdecke unsere Kaffeesorten</h2>
+          <div class="coffee-blends">
+            <section class="coffee-box" id="kaffee1">
+              <p>1</p>
+            </section>
+            <section class="coffee-box" id="kaffee2">
+              <p>2</p>
+            </section>
+            <section class="coffee-box" id="kaffee3">
+              <p>3</p>
+            </section>
+            <section class="coffee-box" id="kaffee4">
+              <p>4</p>
+            </section>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <script src="js/index.js"></script>
+</body>
+
 </html>
+<!--
+  <button type="button" class="btn btn-shop" onclick="my-subpage/index.html">Zum Shop</button>
+  <ul class="navigation">
+          <li>das Café</li>
+          <li>Herkunft</li>
+          <li>Shop</li>
+        </ul>-->
