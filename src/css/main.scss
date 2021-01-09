@@ -70,7 +70,7 @@ brauch ich das überhaupt?????*/
 }
 
 .shop-format{
-  width:375px;
+  width:596px;
   height:910px;
   position:relative;
   top:0;
@@ -80,10 +80,10 @@ brauch ich das überhaupt?????*/
   height: 910px;  /* 382 cafe + 53.75 top + 440 plant (top/bot inkl) =875.75px*/
   position:absolute;
   left:102px;
+  background-color:#1A1A1A;  /*scss einführen!!!!!!!!!!*/
 }
 .shop-content {
   width: 327px;
-  background-color:#1A1A1A;  /*scss einführen!!!!!!!!!!*/
   position:absolute;
   left:24px;
   display:flex;
@@ -96,6 +96,13 @@ brauch ich das überhaupt?????*/
   flex-wrap: nowrap;
     > h2{
       color:#fff;
+      margin-bottom:40px;
+      margin-top:60px;
+      line-height: 34px;
+    }
+    > a {
+      margin-bottom:60px;
+      margin-top:40px;
     }
 }
 
@@ -106,17 +113,89 @@ brauch ich das überhaupt?????*/
   color:#fff;
 }
 //fühlt sich doppelt an aber geht. warum geht snicht oben?//
+//preview image//
 .coffee-box{
 width:155px;
 height:277px;
 }
 
-#kaffe1 {
-  height:15px;
+.blend-img-box {
+  width:155px;
+  height:208px;
+  background-color: #fff;
+  position:relative;
 }
 
-#kaffe2 {
-  height:15px;
+.blend-img {
+ width: 140.31px;
+ height:188.32px;
+ position:absolute;
+ text-align:center;
+}
+
+//icons//
+.icon-line {
+  display:flex;
+  flex-direction:row;
+}
+
+.icon-box   {
+  width:12;
+  height:14;
+  position:relative;
+  }
+
+.icon {
+  color:#fff;
+  position:absolute;
+  &:first-child {
+    width:12px;
+    height:14px;
+  }
+  &:nth-child(2) {
+    width:10px;
+    height:12px;
+  }
+  &:last-child {
+    width:12px;
+    height:13px;
+}
+}
+
+.price {
+  color: #737373;
+  font-size:14px;
+  line-height:18px;
+}
+
+//für personalisierung//
+
+#kaffee1 {
+margin-right:16px;
+margin-bottom:40px;
+}
+
+#kaffee2 {
+  margin-bottom:40px;
+}
+
+#kaffee3 {
+margin-right:16px;
+}
+  
+.btn-products {
+  color:#fff;
+  background:none;
+  border-style:solid;
+  border-width:3px;
+  border-color:#fff;
+  margin-left:auto;
+  margin-right:auto;   //die margins zentrieren!//
+  text-align:center;
+  width:182px;
+  height:48px;
+  padding:15px 50px 15px 50px;
+  //position:absolute;  top:398px;  left:106px;//
 }
 
 /*ist das was für die base?*/
@@ -145,3 +224,7 @@ h3 {
 }
 /*evt muss ich das wo anders einbauen, 
   da bestimmt nicht alle text-m wie bei cafe nach oben 20 px haben*/
+
+.subhead {
+  font-size:18px;
+}
