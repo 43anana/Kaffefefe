@@ -13,23 +13,41 @@
 </head>
 
 <body>
+  <nav class="topnav">
+    <input type="checkbox" class="topnav__checkbox" id="navi-toggle">
+    <label for="navi-toggle" class="topnav__button">
+      <span class="topnav__icon">&nbsp;
+        <svg class="topnav__icon--x" width="24" height="22" viewBox="0 0 24 22" fill="none"
+          xmlns="http://www.w3.org/2000/svg">
+          <path d="M3.5 2L12.5 11M21.5 20L12.5 11M12.5 11L3.5 20M12.5 11L21.5 2" stroke="white" stroke-width="3" />
+        </svg>
+      </span>
+    </label>
+    <div class="topnav__background">&nbsp;</div>
+    <!--empty background nbsp-->
+    <nav class="topnav__nav">
+      <ul class="topnav__list">
+        <li class="topnav__item"><a href="_café/index.html" class="topnav__link">Das Café</a></li>
+        <li class="topnav__item"><a href="_herkunft/index.html" class="topnav__link">Herkunft</a></li>
+        <li class="topnav__item"><a href="_shop/index.html" class="topnav__link">Shop</a></li>
+      </ul>
+    </nav>
+    <div class="topnav__logobox">
+      <img class="topnav__logo" src="img/Logo.svg" alt="logo">
+    </div>
+    <div class="topnav__burgerbox">
+      <img class="topnav__burgermenu" src="img/Burger-menu.svg" alt="burger-menu">
+    </div>
+  </nav>
   <header class="header">
-    <div class="content">
-      <nav class="topnav">
-        <div class="logobox">
-          <img class="logo" src="img/Logo.svg" alt="logo">
-        </div>
-        <div class="burgerbox">
-          <img class="burger-menu" src="img/Burger-menu.svg" alt="burger-menu">
-        </div>
-      </nav>
-      <div class="header-text">
-        <h1 class="title-primary">
-          <span class="title-primary-main">Rustica</span>
-          <span class="title-primary-sub">Bio und Fair seit 1991</span>
+    <div class="header__content">
+      <div class="header__text">
+        <h1 class="title_primary">
+          <span class="title_primary--main">Rustica</span>
+          <span class="title_primary--sub">Bio und Fair seit 1991</span>
         </h1>
       </div>
-      <a class="btn btn-shop" role="button" href="my-subpage/index.html">Zum Shop</a>
+      <a class="btn btn-shop" role="button" href="_shop/index.html">Zum Shop</a>
     </div>
   </header>
 
@@ -164,6 +182,81 @@ SONDERN WIE ETWA BEI SHP VORSCHAU WÄREN DANN DIE VIER KAFFEES SECTIONS-->
       </div>
     </div>
   </main>
+
+  <!--HERKUNFT-->
+  <main class="herkunft-format">
+    <div class="herkunft-outline">
+      <section class="herkunft-text">
+        <h3>Herkunft</h3>
+        <p class="text-m">Weit hinten, hinter den Wortbergen,
+          <br>fern der Länder Vokalien und
+          <br>Konsonantien leben die Blindtexte.
+          <br>Und das alles in bester Bio Qualität
+        </p>
+        <p class="text-m">mehr</p>
+      </section>
+      <section class="herkunft-text2">
+        <div class="dassteckt">
+          <h2>Das steckt drin</h2>
+          <img src="img/FEND_Coffee_Costa-Rica 1.png" alt="blend-img" width="214px" height="284">
+
+          <!--ICON + TEXT INHALT KAFFEE-->
+          <div class="inhaltsstoffe">
+            <div class="icon-mittext">
+              <img class="is-icon" src="img/Icon Kaffee Tasse.svg" alt="coffee-cup-img">
+              <p class="text-m">Bester Geschmack</p>
+            </div>
+
+            <div class="icon-mittext">
+              <img class="is-icon" src="img/Icon Kaffee Schaufel.svg" alt="coffee-shovel-img">
+              <p class="text-m">Fair gehandelt</p>
+            </div>
+
+            <div class="icon-mittext">
+              <img class="is-icons" src="img/Icon-Kaffee Pflanze.svg" alt="coffee-plant-img">
+              <p class="text-m">Bio
+                <br> Qualität
+              </p>
+              <!--unschön mit br oder!?-->
+            </div>
+          </div>
+          <a class="btn btn-shop2" role="button" href="_shop/index.html">Zum Shop</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="herkunft-outline3">
+      <section class="herkunft-text3">
+        <!--weiß grad nicht wo ichs hinsortieren soll..aber eig nich herkunft-->
+        <h2>Komm vorbei</h2>
+      </section>
+      <img id="img-map" src="img/MAP_KAFFEE_Bildschirmfoto 2020-12-14 um 09.59 1.png" alt="screenshot-google-maps">
+    </div>
+  </main>
+  <footer id="footer">
+    <section class="footer-text">
+      <img src="img/Logo.svg" alt="logo">
+      <p class="rust">Rustica</p>
+      <p class="subhead">Café & Rösterei</p>
+      <div class="address text-m-imp">
+        <p>Komm uns besuchen!
+          <br>Fraunhoferstr. 13, Kiel
+        </p>
+        <p>Mo – Fr 8–18 Uhr
+          <br>Sa 11–18 Uhr
+        </p>
+      </div>
+      <div class="further-info text-m-imp">
+        <p>Impressum
+          <br>Datenschutz
+        </p>
+        <p>Café
+          <br>Shop
+          <br>Herkunft
+        </p>
+      </div>
+    </section>
+  </footer>
   <script src="js/index.js"></script>
 </body>
 

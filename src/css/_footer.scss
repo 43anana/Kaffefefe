@@ -1,0 +1,27 @@
+#footer {
+width: 375px;
+height: 370px;
+position:absolute;
+top:3660px;
+background-color:#000;
+color:white;
+}
+
+.footer-text {
+    display:flex;
+    flex-direction: column;
+    margin-top:61px;
+    >.rust {
+        margin-top:15px;
+    }
+    >.address {
+        margin-top:55px;
+        margin-bottom:34px;
+    }
+}
+
+.further-info{
+    display:flex;
+    flex-direction:row;
+    align-content: space-between;
+}

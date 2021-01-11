@@ -1,0 +1,98 @@
+//das mit der vh hab ich irgendwie noch nicht//
+.herkunft-format{
+    width:486px;
+    height:996px;   // 332 + 60 dazischen + 604 + 72 unten + next part?
+    position:relative;
+    //    top:0;  das muss nur bei outline oder//
+  }
+  //irgendwie unnütz oder? auf figma sind noch mehr kästen, wofür?//
+
+  .herkunft-outline {
+    width: 375px;
+    height: 332px;
+    position:absolute;
+    left:102px;
+    top:0;
+    background-image: linear-gradient(rgba(26, 26, 26, 0.5), rgba(26, 26, 26, 0.5)), url(../img/FEND-Coffee-bags-2.png); /*scss einführen!!!!!!!!!!*/
+  }
+
+  .herkunft-text {
+      text-align:center;
+      color:#fff;
+      margin-top:87px;
+      display:flex;
+      flex-direction: column;
+      >p {
+          color:#fff;
+      }
+  }
+
+  .herkunft-text2{
+    position: absolute;
+    top:332px;
+    width: 375px; //333px steht da irgendwie auf figma, passt aber nich;//
+    height: 736px; //60 oben +604 +72 unten //
+    background-color:#fff;
+  }
+
+    .dassteckt{
+    text-align:center;
+    width: 333px;
+    height: 604px;
+    margin-left: 20px;
+    margin-top:60px;
+    margin-bottom:72px;
+    display:flex;
+    flex-direction: column;
+    align-items:center; //ausrichtung aller elemente auf querachse, also bei colum die x achse//
+    > h2 {
+        color:#000;
+    }
+  }
+
+  .inhaltsstoffe {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-between;
+  }
+
+  .icon-mittext{
+    width:87px;
+    height:123px;
+  }
+
+  .is-icons {
+      color:#3A3734;
+      width: 45px;
+      height: 45px;
+  }
+  /*habe heir jetzt absichtlich alle 3 icons gleich groß gemacht..die sind online 
+  ja auch leicht verschoben,aber wenn es gewollt ist, kann ich die genauen Maße noch einfügen*/
+
+.herkunft-outline3 {
+    background-color:#fff;
+    width: 375px;
+    height: 300px;
+    position:absolute;
+    left:102px;
+    top:1038;
+}
+
+ .herkunft-text3 {
+    position:absolute;    
+    top:1038px;
+    left:24px;
+    width: 327px;
+    height:300px;
+}
+ 
+    .stop-by {
+    display:flex;
+    flex-direction:column;
+}
+
+  #img-map {
+    width:376px;
+    height:231px;
+    margin-top:35px;
+  }

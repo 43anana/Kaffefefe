@@ -1,0 +1,137 @@
+
+.shop-format{
+    width:596px;
+    height:910px;
+    position:relative;
+    top:0;
+  }
+  .shop-outline {
+    width: 375px;
+    height: 910px;  /* 382 cafe + 53.75 top + 440 plant (top/bot inkl) =875.75px*/
+    position:absolute;
+    left:102px;
+    background-color:#1A1A1A;  /*scss einführen!!!!!!!!!!*/
+  }
+  .shop-content {
+    width: 327px;
+    position:absolute;
+    left:24px;
+    display:flex;
+    flex-direction: column;
+    }
+  
+  .shop-content2 {
+    display:flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+      > h2{
+        color:#fff;
+        margin-bottom:40px;
+        margin-top:60px;
+        line-height: 34px;
+      }
+      > a {
+        margin-bottom:60px;
+        margin-top:40px;
+      }
+  }
+  
+  .coffee-blends {
+    display:flex;
+    flex-direction:row;
+    flex-wrap: wrap;
+    color:#fff;
+  }
+  //fühlt sich doppelt an aber geht. warum geht snicht oben?//
+  //preview image//
+  .coffee-box{
+  width:155px;
+  height:277px;
+  }
+  
+  .blend-img-box {
+    width:155px;
+    height:208px;
+    background-color: #fff;
+    position:relative;
+  }
+  
+  .blend-img {
+   width: 140.31px;
+   height:188.32px;
+   position:absolute;
+   text-align:center;
+  }
+  
+  //icons//
+  .icon-line {
+    display:flex;
+    flex-direction:row;
+  }
+  
+  .icon-box   {
+    width:12;
+    height:14;
+    margin-right:8px;
+   // position:relative;// aber dann ist die icon box unnütz oder ?
+    }
+  
+  .icon {
+    color:#fff;  
+    //position:absolute;//
+    &:first-child {
+      width:12px;
+      height:14px;
+    }
+    &:nth-child(2) {
+      width:10px;
+      height:12px;
+    }
+    &:last-child {
+      width:12px;
+      height:13px;
+  }
+  }
+  
+  .price {
+    color: #737373;
+    font-size:14px;
+    line-height:18px;
+  }
+  
+  //für personalisierung//
+  
+  #kaffee1 {
+  margin-right:16px;
+  margin-bottom:40px;
+  }
+  
+  #kaffee2 {
+    margin-bottom:40px;
+  }
+  
+  #kaffee3 {
+  margin-right:16px;
+  }
+    
+  //BUTTON HELL UMBENENNEN..nich das er hell wäre
+  .btn-products {
+    color:#fff;
+    background: #ffff; //bei elements ist der button weiß, aber 
+    border-style:solid;
+    border-width:3px;
+    border-color:#fff;
+    margin-left:auto;
+    margin-right:auto;   //die margins zentrieren!//
+    text-align:center;
+    width:182px;
+    height:48px;
+    padding:15px 50px 15px 50px;
+    //position:absolute;  top:398px;  left:106px;//
+
+      //auf figma habe ich bei elements diese angabe für hover gefunden: box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25); 
+      //dann bräuchte ich aber auch:       &:hover{ color:black; }
+      //und diese für den button hell bei der shop-vorschau. da der button ja überhaupt nicht weiß ist, bin ich eh verwirrt:
+      //filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));  -->LERNGRUPPE FRAGEN
+
+  }
