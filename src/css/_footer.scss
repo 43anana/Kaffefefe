@@ -1,27 +1,50 @@
-#footer {
+.footer {
 width: 375px;
 height: 370px;
-position:absolute;
-top:3660px;
 background-color:#000;
 color:white;
+display:flex;
+flex-direction: column;
 }
 
 .footer-text {
-    display:flex;
-    flex-direction: column;
-    margin-top:61px;
-    >.rust {
+   // display:flex;
+   // flex-direction: column;
+   // margin-top:61px;
+   margin-left:24px;
+   margin-top:61px;
+    .rust {
         margin-top:15px;
     }
-    >.address {
+    .address {
         margin-top:55px;
         margin-bottom:34px;
     }
+    
+    .text-m-imp{
+    font-family:"Roboto", sans-serif;
+    font-weight:400;
+    font-size:1.4rem;
+    line-height:1.8rem;
+    color:white;
+    display:flex;
+    flex-direction:row;
+        :first-child{
+        margin-right:17px;
+        width:156px;
+        }               //text-m-imp ist schon relativ ähnlich zu text-m und
+    }                   // auch zu .address mti der flex-formatierung-->geht schöner
 }
 
+
+
+/* wofür waren die ? :D
 .further-info{
     display:flex;
     flex-direction:row;
     align-content: space-between;
 }
+.stop-by {
+    display:flex;
+    flex-direction:column;
+} */

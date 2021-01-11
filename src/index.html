@@ -14,6 +14,7 @@
 
 <body>
   <nav class="topnav">
+    <!--sollte das lieber nicht auch nav heißen?-->
     <input type="checkbox" class="topnav__checkbox" id="navi-toggle">
     <label for="navi-toggle" class="topnav__button">
       <span class="topnav__icon">&nbsp;
@@ -23,6 +24,9 @@
         </svg>
       </span>
     </label>
+    <div class="topnav__logobox">
+      <img class="topnav__logo" src="img/Logo.svg" alt="logo">
+    </div>
     <div class="topnav__background">&nbsp;</div>
     <!--empty background nbsp-->
     <nav class="topnav__nav">
@@ -32,161 +36,150 @@
         <li class="topnav__item"><a href="_shop/index.html" class="topnav__link">Shop</a></li>
       </ul>
     </nav>
-    <div class="topnav__logobox">
-      <img class="topnav__logo" src="img/Logo.svg" alt="logo">
-    </div>
-    <div class="topnav__burgerbox">
-      <img class="topnav__burgermenu" src="img/Burger-menu.svg" alt="burger-menu">
-    </div>
   </nav>
+
+  <!--HEADER-->
   <header class="header">
-    <div class="header__content">
-      <div class="header__text">
-        <h1 class="title_primary">
-          <span class="title_primary--main">Rustica</span>
-          <span class="title_primary--sub">Bio und Fair seit 1991</span>
-        </h1>
-      </div>
-      <a class="btn btn-shop" role="button" href="_shop/index.html">Zum Shop</a>
+    <!--<div class="header__content">-->
+    <div class="header__text">
+      <h1 class="title_primary">
+        <span class="title_primary--main">Rustica</span>
+        <span class="title_primary--sub">Bio und Fair seit 1991</span>
+      </h1>
+    </div>
+    <a class="btn btn-shop" role="button" href="_shop/index.html">Zum Shop</a>
     </div>
   </header>
 
-  <main class="page-format">
-    <!--ggf. unnötig. gibt es sowieso nur weil der header so komsich formatiert ist-->
-    <!--könnte zumindest so breit sein wie alles andere.. generelle frage der header class-->
+  <!--CAFÉ PREVIEW-->
+  <main class="café">
+    <section class="café__content café__content--location">
+      <!--lieber article?oder nur ein div?-->
+      <h2>Rösterei & Café</h2>
+      <p class="text-m">Kaffee aus Kiel, direkt gehandelt
+        und geröstet in der eigenen Rösterei, serviert im
+        gemütlichen Café in der Innenstadt.</p>
+      <div class="address text-m">
+        <p>Komm uns besuchen!
+          <br>Fraunhoferstr. 13, Kiel
+        </p>
+        <p>Mo – Fr 8–18 Uhr
+          <br>Sa 11–18 Uhr
+        </p>
+      </div>
+      <img id="café-img" alt="café-img" src="img/FEND-Coffee-shop.png">
+    </section>
 
-    <!--ICH GLAUB IM WAHREN LEBEN HAT CAFE HALT N EIENES INDEX UND DADURCH IST ES KEINE SECTION
-SONDERN WIE ETWA BEI SHP VORSCHAU WÄREN DANN DIE VIER KAFFEES SECTIONS-->
-
-    <!--RÖSTEREI + CAFÉ-->
-    <div class="page-outline">
-      <section class="page-content" id="café">
-        <!--lieber article?oder nur ein div?-->
-        <h2>Rösterei & Café</h2>
-        <p class="text-m">Kaffee aus Kiel, direkt gehandelt
-          und geröstet in der eigenen Rösterei, serviert im
-          gemütlichen Café in der Innenstadt.</p>
-        <div class="address text-m">
-          <p>Komm uns besuchen!
-            <br>Fraunhoferstr. 13, Kiel
-          </p>
-          <p>Mo – Fr 8–18 Uhr
-            <br>Sa 11–18 Uhr
-          </p>
-        </div>
-        <img id="café-img" alt="café-img" src="img/FEND-Coffee-shop.png">
-      </section>
-
-      <section class="page-content" id="bio">
-        <h3 class>Bio und Fair</h3>
-        <p class="text-m" id="bio-text">Weit hinten, hinter den Wortbergen, fern der Länder
-          Vokalien und Konsonantien leben die Blindtexte. Weit hinten, hinter
-          den Wortbergen, fern der Länder Vokalien und Konsonantien leben die
-          Blindtexte. Und das alles in bester Bio Qualität</p>
-        <img id="plant-img" alt="coffeeplant-img" src="img/FEND-coffee-plant.png">
-      </section>
+    <section class="café__content café__content--info">
+      <h3>Bio und Fair</h3>
+      <p class="text-m" id="bio-text">Weit hinten, hinter den Wortbergen, fern der Länder
+        Vokalien und Konsonantien leben die Blindtexte. Weit hinten, hinter
+        den Wortbergen, fern der Länder Vokalien und Konsonantien leben die
+        Blindtexte. Und das alles in bester Bio Qualität</p>
+      <img id="plant-img" alt="coffeeplant-img" src="img/FEND-coffee-plant.png">
+    </section>
     </div>
   </main>
 
-  <!--SHOP-->
-  <main class="shop-format">
-    <div class="shop-outline">
-      <div class="shop-content">
-        <!--das muss geiler gehen mti den ähnlichne ovn oben!-->
-        <div class="shop-content2">
-          <h2>Entdecke unsere Kaffeesorten</h2>
-          <div class="coffee-blends">
+  <!--SHOP PREVIEW-->
+  <main class="shop">
+    <div class="shop__outline">
+      <!--das muss geiler gehen mti den ähnlichne ovn oben!-->
+      <div class="shop__content">
+        <h2>Entdecke unsere Kaffeesorten</h2>
 
-            <!--coffee-previews-->
-            <section class="coffee-box" id="kaffee1">
-              <div class="blend-img-box">
-                <img class="blend-img" src="img/FEND_Coffee_Costa-Rica 1.png" alt="blend-img">
-              </div>
-              <p class="subhead">Costa Rica</p>
-              <p class="price">6,90€ – 26,90€</p>
+        <div class="shop__blends">
+          <!--coffee-previews-->
+          <section class="__blends--preview" id="kaffee1">
+            <div class="blend-img-box">
+              <img class="blend-img" src="img/FEND_Coffee_Costa-Rica 1.png" alt="blend-img">
+            </div>
+            <p class="subhead">Costa Rica</p>
+            <p class="price">6,90€ – 26,90€</p>
 
-              <div class="icon-line">
-                <div class="icon-box">
-                  <img class="icon" src="img/Icon Kaffee Bohnen.svg" alt="coffeebeans-img">
-                </div>
-                <div class="icon-box">
-                  <img class="icon" src="img/Icon French Press.svg" alt="frenchpress-img">
-                </div>
-                <div class="icon-boxdi">
-                  <img class="icon" src="img/Icon Kaffee Schaufel.svg" alt="coffee-shovel-img">
-                </div>
+            <div class="icon-line">
+              <div class="icon-box">
+                <img class="icon" src="img/Icon Kaffee Bohnen.svg" alt="coffeebeans-img">
               </div>
-            </section>
+              <div class="icon-box">
+                <img class="icon" src="img/Icon French Press.svg" alt="frenchpress-img">
+              </div>
+              <div class="icon-box">
+                <img class="icon" src="img/Icon Kaffee Schaufel.svg" alt="coffee-shovel-img">
+              </div>
+            </div>
+          </section>
 
-            <section class="coffee-box" id="kaffee2">
-              <div class="blend-img-box">
-                <img class="blend-img" src="img/FEND_Coffee_Costa-Rica 1.png" alt="blend-img">
-              </div>
-              <p class="subhead">Costa Rica</p>
-              <p class="price">6,90€ – 26,90€</p>
+          <section class="__blends--preview" id="kaffee2">
+            <div class="blend-img-box">
+              <img class="blend-img" src="img/FEND_Coffee_Costa-Rica 1.png" alt="blend-img">
+            </div>
+            <p class="subhead">Costa Rica</p>
+            <p class="price">6,90€ – 26,90€</p>
 
-              <div class="icon-line">
-                <div class="icon-box">
-                  <img class="icon" src="img/Icon Kaffee Bohnen.svg" alt="coffeebeans-img">
-                </div>
-                <div class="icon-box">
-                  <img class="icon" src="img/Icon French Press.svg" alt="frenchpress-img">
-                </div>
-                <div class="icon-boxdi">
-                  <img class="icon" src="img/Icon Kaffee Schaufel.svg" alt="coffee-shovel-img">
-                </div>
+            <div class="icon-line">
+              <div class="icon-box">
+                <img class="icon" src="img/Icon Kaffee Bohnen.svg" alt="coffeebeans-img">
               </div>
-            </section>
-            <section class="coffee-box" id="kaffee3">
-              <div class="blend-img-box">
-                <img class="blend-img" src="img/FEND_Coffee_Costa-Rica 1.png" alt="blend-img">
+              <div class="icon-box">
+                <img class="icon" src="img/Icon French Press.svg" alt="frenchpress-img">
               </div>
-              <p class="subhead">Costa Rica</p>
-              <p class="price">6,90€ – 26,90€</p>
+              <div class="icon-box">
+                <img class="icon" src="img/Icon Kaffee Schaufel.svg" alt="coffee-shovel-img">
+              </div>
+            </div>
+          </section>
+          <section class="__blends--preview" id="kaffee3">
+            <div class="blend-img-box">
+              <img class="blend-img" src="img/FEND_Coffee_Costa-Rica 1.png" alt="blend-img">
+            </div>
+            <p class="subhead">Costa Rica</p>
+            <p class="price">6,90€ – 26,90€</p>
 
-              <div class="icon-line">
-                <div class="icon-box">
-                  <img class="icon" src="img/Icon Kaffee Bohnen.svg" alt="coffeebeans-img">
-                </div>
-                <div class="icon-box">
-                  <img class="icon" src="img/Icon French Press.svg" alt="frenchpress-img">
-                </div>
-                <div class="icon-boxdi">
-                  <img class="icon" src="img/Icon Kaffee Schaufel.svg" alt="coffee-shovel-img">
-                </div>
+            <div class="icon-line">
+              <div class="icon-box">
+                <img class="icon" src="img/Icon Kaffee Bohnen.svg" alt="coffeebeans-img">
               </div>
-            </section>
-            <section class="coffee-box" id="kaffee4">
-              <div class="blend-img-box">
-                <img class="blend-img" src="img/FEND_Coffee_Costa-Rica 1.png" alt="blend-img">
+              <div class="icon-box">
+                <img class="icon" src="img/Icon French Press.svg" alt="frenchpress-img">
               </div>
-              <p class="subhead">Costa Rica</p>
-              <p class="price">6,90€ – 26,90€</p>
+              <div class="icon-box">
+                <img class="icon" src="img/Icon Kaffee Schaufel.svg" alt="coffee-shovel-img">
+              </div>
+            </div>
+          </section>
+          <section class="__blends--preview" id="kaffee4">
+            <div class="blend-img-box">
+              <img class="blend-img" src="img/FEND_Coffee_Costa-Rica 1.png" alt="blend-img">
+            </div>
+            <p class="subhead">Costa Rica</p>
+            <p class="price">6,90€ – 26,90€</p>
 
-              <div class="icon-line">
-                <div class="icon-box">
-                  <img class="icon" src="img/Icon Kaffee Bohnen.svg" alt="coffeebeans-img">
-                </div>
-                <div class="icon-box">
-                  <img class="icon" src="img/Icon French Press.svg" alt="frenchpress-img">
-                </div>
-                <div class="icon-boxdi">
-                  <img class="icon" src="img/Icon Kaffee Schaufel.svg" alt="coffee-shovel-img">
-                </div>
+            <div class="icon-line">
+              <div class="icon-box">
+                <img class="icon" src="img/Icon Kaffee Bohnen.svg" alt="coffeebeans-img">
               </div>
-            </section>
-          </div>
-          <!--BUTTON-->
-          <a href="#" role="button" class="btn btn-products">alle Produkte</a>
+              <div class="icon-box">
+                <img class="icon" src="img/Icon French Press.svg" alt="frenchpress-img">
+              </div>
+              <div class="icon-boxdi">
+                <img class="icon" src="img/Icon Kaffee Schaufel.svg" alt="coffee-shovel-img">
+              </div>
+            </div>
+          </section>
         </div>
+
+        <!--BUTTON-->
+        <a href="_shop/index.html" role="button" class="btn btn-products">alle Produkte</a>
       </div>
+    </div>
     </div>
   </main>
 
   <!--HERKUNFT-->
-  <main class="herkunft-format">
-    <div class="herkunft-outline">
-      <section class="herkunft-text">
+  <main class="herkunft">
+    <section class="herkunft__text1">
+      <div class="füreinezeilendivnervtecht">
         <h3>Herkunft</h3>
         <p class="text-m">Weit hinten, hinter den Wortbergen,
           <br>fern der Länder Vokalien und
@@ -194,46 +187,51 @@ SONDERN WIE ETWA BEI SHP VORSCHAU WÄREN DANN DIE VIER KAFFEES SECTIONS-->
           <br>Und das alles in bester Bio Qualität
         </p>
         <p class="text-m">mehr</p>
-      </section>
-      <section class="herkunft-text2">
-        <div class="dassteckt">
-          <h2>Das steckt drin</h2>
-          <img src="img/FEND_Coffee_Costa-Rica 1.png" alt="blend-img" width="214px" height="284">
+      </div>
+    </section>
 
-          <!--ICON + TEXT INHALT KAFFEE-->
-          <div class="inhaltsstoffe">
-            <div class="icon-mittext">
-              <img class="is-icon" src="img/Icon Kaffee Tasse.svg" alt="coffee-cup-img">
-              <p class="text-m">Bester Geschmack</p>
-            </div>
+    <section class="herkunft__text2">
+      <div class="dassteckt">
+        <h2>Das steckt drin</h2>
+        <img src="img/FEND_Coffee_Costa-Rica 1.png" alt="blend-img" width="214px" height="284">
+        <!--inline nachgn.-->
 
-            <div class="icon-mittext">
-              <img class="is-icon" src="img/Icon Kaffee Schaufel.svg" alt="coffee-shovel-img">
-              <p class="text-m">Fair gehandelt</p>
-            </div>
-
-            <div class="icon-mittext">
-              <img class="is-icons" src="img/Icon-Kaffee Pflanze.svg" alt="coffee-plant-img">
-              <p class="text-m">Bio
-                <br> Qualität
-              </p>
-              <!--unschön mit br oder!?-->
-            </div>
+        <!--ICON + TEXT INHALT KAFFEE-->
+        <div class="herkunft__inhalt">
+          <div class="icon-mittext">
+            <img class="is-icon" src="img/Icon Kaffee Tasse.svg" alt="coffee-cup-img">
+            <p class="text-m">Bester Geschmack</p>
           </div>
-          <a class="btn btn-shop2" role="button" href="_shop/index.html">Zum Shop</a>
+
+          <div class="icon-mittext">
+            <img class="is-icon" src="img/Icon Kaffee Schaufel.svg" alt="coffee-shovel-img">
+            <p class="text-m">Fair gehandelt</p>
+          </div>
+
+          <div class="icon-mittext">
+            <img class="is-icons" src="img/Icon-Kaffee Pflanze.svg" alt="coffee-plant-img">
+            <p class="text-m">Bio
+              <br> Qualität
+            </p>
+            <!--unschön mit br oder!?-->
+          </div>
         </div>
-      </section>
+        <a class="btn btn-shop2" role="button" href="_shop/index.html">Zum Shop</a>
+        <!--wegen positionierung aktuell 2 btn-shop..auflösen!-->
+      </div>
+    </section>
     </div>
 
-    <div class="herkunft-outline3">
-      <section class="herkunft-text3">
+    <div class="herkunft__visit">
+      <section class="herkunft__text3">
         <!--weiß grad nicht wo ichs hinsortieren soll..aber eig nich herkunft-->
         <h2>Komm vorbei</h2>
       </section>
       <img id="img-map" src="img/MAP_KAFFEE_Bildschirmfoto 2020-12-14 um 09.59 1.png" alt="screenshot-google-maps">
     </div>
   </main>
-  <footer id="footer">
+
+  <footer class="footer">
     <section class="footer-text">
       <img src="img/Logo.svg" alt="logo">
       <p class="rust">Rustica</p>
@@ -246,7 +244,7 @@ SONDERN WIE ETWA BEI SHP VORSCHAU WÄREN DANN DIE VIER KAFFEES SECTIONS-->
           <br>Sa 11–18 Uhr
         </p>
       </div>
-      <div class="further-info text-m-imp">
+      <div class="text-m-imp">
         <p>Impressum
           <br>Datenschutz
         </p>

@@ -1,61 +1,63 @@
 //das mit der vh hab ich irgendwie noch nicht//
-.herkunft-format{
+/*.herkunft-format{
     width:486px;
     height:996px;   // 332 + 60 dazischen + 604 + 72 unten + next part?
     position:relative;
     //    top:0;  das muss nur bei outline oder//
   }
-  //irgendwie unnütz oder? auf figma sind noch mehr kästen, wofür?//
+  //irgendwie unnütz oder? auf figma sind noch mehr kästen, wofür?//*/
 
-  .herkunft-outline {
-    width: 375px;
-    height: 332px;
-    position:absolute;
-    left:102px;
-    top:0;
-    background-image: linear-gradient(rgba(26, 26, 26, 0.5), rgba(26, 26, 26, 0.5)), url(../img/FEND-Coffee-bags-2.png); /*scss einführen!!!!!!!!!!*/
-  }
-
-  .herkunft-text {
-      text-align:center;
-      color:#fff;
-      margin-top:87px;
-      display:flex;
-      flex-direction: column;
-      >p {
-          color:#fff;
-      }
-  }
-
-  .herkunft-text2{
-    position: absolute;
-    top:332px;
-    width: 375px; //333px steht da irgendwie auf figma, passt aber nich;//
-    height: 736px; //60 oben +604 +72 unten //
-    background-color:#fff;
-  }
-
-    .dassteckt{
-    text-align:center;
-    width: 333px;
-    height: 604px;
-    margin-left: 20px;
-    margin-top:60px;
-    margin-bottom:72px;
+  .herkunft {
+    width: 375px;    //brauche keine height !
+    background-color:$color-white;
     display:flex;
     flex-direction: column;
-    align-items:center; //ausrichtung aller elemente auf querachse, also bei colum die x achse//
-    > h2 {
-        color:#000;
+    flex-wrap: nowrap ;   //nochmal nachlesen pls
+    /*position:absolute;
+    top:0;  brauch ich ja jetz auch nich mehr oder*/
+    &__text1 {
+      background-image: linear-gradient(rgba($color-anthra, .5), rgba($color-anthra, .5)), url(../img/FEND-Coffee-bags-2.png);
+      text-align:center;
+      height:332px;
+      color:#fff;
+      display:flex;
+      flex-direction: column;
+      .füreinezeilendivnervtecht{
+        margin-top:8.7rem;
+        >p,
+        >h3 {
+            color:#fff;
+        }
+      }
+    }
+    &__text2{
+// so was kann bei flex einfach weg ne?!    top:392px;
+    width: 375px; //kann eig weg oder?
+    height: 664px; //60 oben +604 +72 unten //
+      .dassteckt{
+        text-align:center;
+        width: 333px;
+        height: 604px;
+        margin-left: 20px;
+        margin-top:60px;
+        //brauch ich ja gar nicht, habe ich ja oben in der höhe ..margin-bottom:72px;
+        display:flex;
+        flex-direction: column;
+        align-items:center; //ausrichtung aller elemente auf querachse, also bei colum die x achse//
+        >h2 {
+            color:#000;
+        }
+      }
+    }
+    &__inhalt {
+      display:flex;
+      flex-direction:row;
+      justify-content: space-between;
     }
   }
 
-  .inhaltsstoffe {
-    display:flex;
-    flex-direction:row;
-    justify-content: space-between;
-  }
 
+//MEEHR ICONS ..könnte man natürlich auch mit BEM machen
   .icon-mittext{
     width:87px;
     height:123px;
@@ -69,30 +71,32 @@
   /*habe heir jetzt absichtlich alle 3 icons gleich groß gemacht..die sind online 
   ja auch leicht verschoben,aber wenn es gewollt ist, kann ich die genauen Maße noch einfügen*/
 
-.herkunft-outline3 {
-    background-color:#fff;
-    width: 375px;
-    height: 300px;
-    position:absolute;
-    left:102px;
-    top:1038;
-}
 
- .herkunft-text3 {
-    position:absolute;    
-    top:1038px;
-    left:24px;
+//KOMM VORBEI TEIL. passt eigentlich nicht zu Herkunft, wohin?
+
+.herkunft{
+    &__visit {              //oben jetzt nicht reingenestet wegen icon teil dazwischen + unpassend
+    width: 375px;
+    height: 300px;  
+    display:flex;
+    flex-direction: column;
+    //background-color: $color-white;
+    }
+    
+    &__text3 {  
+    margin-left:24px;
     width: 327px;
     height:300px;
-}
- 
-    .stop-by {
-    display:flex;
-    flex-direction:column;
-}
+      >h2 {
+        color:$color-black;
+        margin-bottom:35px;
+      }
+    }
+  }
+
 
   #img-map {
-    width:376px;
+    width:375px;
     height:231px;
-    margin-top:35px;
+  //  top:1073px; //1038 + 35px;
   }

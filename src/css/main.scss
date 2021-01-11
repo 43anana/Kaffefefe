@@ -6,7 +6,7 @@
 @import "_café";
 @import "_herkunft";
 @import "_shop";
-@import "footer";
+@import "_footer";
 
 
 :root {
@@ -22,13 +22,12 @@
 }
 
 html {
-  font-size:62.5%; /*1 rem =root font size, normalerweise 16, wollen aber 10 
+  font-size:62.5%; /*1 rem =>root font size, normalerweise 16, wollen aber 10 
   (damit:10 = 1 rem). für user friendly nehmen wir aber: 10:16=62.5% =10 px falls default 16px
   merke:rem geht bei vielen alten explorern nicht*/
 }
 
-body {
-  height:403rem;
+body {    //man setzt keine height oder?
   width:37.5rem; 
   font-family: "Roboto", sans-serif;
   font-weight:400;
@@ -41,45 +40,21 @@ body {
   das..der ganze rest ist weiter mittig, damit er mittig vom header ist.. 
   habe ich ja auch 102 px gesetzt..aber den body will ich doch auch mittig?*/
 }  
+/*body {
+  height:403rem;
+  width:37.5rem; 
+  font-family: "Roboto", sans-serif;
+  font-weight:400;
+ // font-size: 16px;  //
+  line-height:1.7;
+  /*padding:20px;   wozu?ausm video glaub ich
+  background-color:rgb(124, 21, 21);
+  box-sizing:border-box;
+  /*border:3px solid grey; -->zum gucken ..mein body ist linksbündig..wie ändere ich 
+  das..der ganze rest ist weiter mittig, damit er mittig vom header ist.. 
+  habe ich ja auch 102 px gesetzt..aber den body will ich doch auch mittig?
+}  */
 
-/*alle weiteren subpages*/
-
-.page-format{
-  width:59.6rem;
-  height:87.58rem; //875.75px//
-  position:relative;
-  top:0;
-} /*ganz ehrlich, ich hab format/bzw header (equival.) 
-jetzt nur um von dort aus outline richtig zu schieben. 
-brauch ich das überhaupt?????*/
-
-.page-outline {
-    width: 37.5rem;
-    height: 87.575rem;  /* 382 cafe + 53.75 top + 440 plant (top/bot inkl) =875.75px*/
-    position:absolute;
-    left:10.2rem;
-    background-color:white;
-}
-
-.page-content {
-  width: 32.7rem;
-  color:#000;
-  display:flex;
-  flex-direction: column;
-  }
-
-#café {
-  height:38.2rem;   /*stichwort inherit:muss ich noch mal flexen, damit die children das auch tun?*/
-  position:absolute;
-  left:2.4rem;
-  top:5.375rem;
-}
-#bio {
-  height:34.4rem;
-  position:absolute;
-  left:2.4rem;
-  top:47.375rem;  /*die höhe der #café section + position top + space(40) zwischen sections. das geht schöner!*/
-}
 
 
 /*ist das was für die base?*/
@@ -108,15 +83,6 @@ h3 {
   margin-top:2rem; 
 }
 
-.text-m-imp{
-  font-family:"Roboto", sans-serif;
-  font-weight:400;
-  font-size:1.4rem;
-  line-height:1.8rem;
-  color:white;
-}
-/*das fühlt sich doppelt an*/
-
 .subhead {
   font-size:1.8rem;
   line-height: 2.1rem;
@@ -126,6 +92,15 @@ h3 {
   font-weight:900;
   font-size:2.4rem;
   line-height: 2.8rem;
+}
+.address {
+  display:flex;
+  flex-direction: row;
+  margin-top:20px;
+  :first-child{
+      margin-right:17px;
+      width:156px;
+  }
 }
 
 //BUTTONS//
@@ -175,6 +150,30 @@ h3 {
     background-color:$color-btn-active;
   }
 }
+
+
+  //BUTTON HELL UMBENENNEN..nich das er hell wäre
+  .btn-products {
+    color:#fff;
+    background: none; //bei elements ist der button weiß, aber bei vorschau nicht?!
+    border-style:solid;
+    border-width:3px;
+    border-color:#fff;
+    margin-left:auto;
+    margin-right:auto;   //die margins zentrieren!//
+    text-align:center;
+    width:182px;
+    height:48px;
+    padding:15px 50px 15px 50px;
+    //position:absolute;  top:398px;  left:106px;//
+
+      //auf figma habe ich bei elements diese angabe für hover gefunden: box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25); 
+      //dann bräuchte ich aber auch:       &:hover{ color:black; }
+      //und diese für den button hell bei der shop-vorschau. da der button ja überhaupt nicht weiß ist, bin ich eh verwirrt:
+      //filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));  -->LERNGRUPPE FRAGEN
+
+  }
+
 .giphy {
   position: relative;
   /*bottom: 33%;

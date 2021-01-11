@@ -1,13 +1,36 @@
-.address {
-    display:flex;
-    flex-direction: row;
-    margin-top:20px;
-    :first-child{
-        margin-right:17px;
-        width:156px;
-    }
-}
+.café{
+    width:375px;//59.6rem; 
+    height:87.575rem; //875.75px///* 382 cafe + 53.75 top + 440 plant (top/bot inkl) =875.75px*/
+    position:relative;
+    top:0;
+    background-color:white; //sprach was gegen body white machen?
 
+    &__content {
+        width: 32.7rem;
+        color:#000;
+        display:flex;
+        flex-direction: column;
+
+        &--location{
+            height:38.2rem;   /*stichwort inherit:muss ich noch mal flexen, damit die children das auch tun?*/
+            position:absolute;
+            left:2.4rem;
+            top:5.375rem;
+        }
+
+        &--info{
+            height:34.4rem;
+            position:absolute;
+            left:2.4rem;
+            top:47.375rem;
+        }
+        }
+    
+    
+  } 
+  
+//allgemeien Nesting Frage: würde ich die jetzt irgendwie oben noch drin verwurschteln wollen, oder tatsächlich nur 
+//alles was sich nach dem bem prinzip aufschlüsseln lässt/so benannt ist?
 #café-img {
     width: 241px;
     height:182px;

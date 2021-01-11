@@ -1,9 +1,13 @@
 .header {
-    width:596px;
-    height:500.25px; /*75vh schneidet ja was ab???;*/
+    width:375px; 
+    height:500.25px; //75vh will nciht in meinen kopf..schneidet doch was ab ??!
     position:relative;
     top:0;
-    &__content{
+    background-image: linear-gradient(rgba(26, 26, 26, 0.3), rgba(26, 26, 26, 0.3)), url(../img/FEND-Coffee-latte-art-3.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:top;
+    /*&__content{       kann raus!
         width: 375px;
         height: 500.25px;
         position:absolute;
@@ -12,62 +16,31 @@
         background-repeat: no-repeat;
         background-size: cover;
         background-position:top;
-        .topnav {
-            background-color:none;
-            width:375px;
-            height:55px;
-            left:20px;
-            top:95px;
-            display:flex;
-            flex-direction: row;
-                &__logobox{
-                        position:relative;
-                        left: 6.4%;
-                        top: 18.18%;
-                    &__logo {
-                           color:white;    
-                           width:35px;    
-                           height:35px;    
-                           position:absolute; 
-                    }
-                }
-                &__burgerbox {
-                    position:relative;
-                    left:87.2%; //da steht eigentlich:87.2%;=237 px ->das ist aber zu weit rechts..hab ich was geerbt? //
-                    top: 38.18%;   //auch hier entspricht das den 21 px die auf figma von den 55 gesamt height abgehen//
-                    right:6.4%;
-                    &__burgermenu {
-                        color:white;
-                        position:absolute;
-                        height:1.25rem;
-                        width:2.35rem;
-                    }
-                }
+*/
+    &__text {
+        text-align:center;
+        display:inline-block;
+        position:absolute;
+        top:50%;
+        left:50%;
+        transform:translate(-50%, -50%);
+        .title_primary{
+            color:$color-white;
+            &--main {
+                font-family:"Roboto", sans-serif;
+                font-weight:900;
+                font-size:6.4rem;
+                line-height:75px;
             }
-            &__text {
-                text-align:center;
-                display:inline-block;
-                position:absolute;
-                top:50%;
-                left:50%;
-                transform:translate(-50%, -50%);
-                .title_primary{
-                    color:$color-white;
-                    &--main {
-                        font-family:"Roboto", sans-serif;
-                        font-weight:900;
-                        font-size:6.4rem;
-                        line-height:75px;
-                    }
-                    &--sub {
-                        font-weight:400;
-                        font-size:1.8rem;
-                        line-height:21px;
-                    }
-                }
+            &--sub {
+                font-weight:400;
+                font-size:1.8rem;
+                line-height:21px;
             }
         }
-    }
+        }
+    //}
+}
 
 
 /*
