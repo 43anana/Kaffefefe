@@ -33,6 +33,12 @@
         &--preview{
           width:155px;
           height:277px;
+          .subhead {
+            margin-top:11px;
+          }                         //eeeyy wieso macht weder subhead noch img das -.-
+          >div{
+            margin-bottom:11px;
+          }
         }
       }
   }

@@ -12,9 +12,9 @@
   <!--<link href="https://fonts.googleapis.com/css?family=Oregano" rel="stylesheet"> -->
 </head>
 
+
 <body>
-  <nav class="topnav">
-    <!--sollte das lieber nicht auch nav heißen?-->
+  <div class="topnav">
     <input type="checkbox" class="topnav__checkbox" id="navi-toggle">
     <label for="navi-toggle" class="topnav__button">
       <span class="topnav__icon">&nbsp;
@@ -36,7 +36,7 @@
         <li class="topnav__item"><a href="_shop/index.html" class="topnav__link">Shop</a></li>
       </ul>
     </nav>
-  </nav>
+  </div>
 
   <!--HEADER-->
   <header class="header">
@@ -56,10 +56,10 @@
     <section class="café__content café__content--location">
       <!--lieber article?oder nur ein div?-->
       <h2>Rösterei & Café</h2>
-      <p class="text-m">Kaffee aus Kiel, direkt gehandelt
+      <p class="text-m--black" id="roest-text">Kaffee aus Kiel, direkt gehandelt
         und geröstet in der eigenen Rösterei, serviert im
         gemütlichen Café in der Innenstadt.</p>
-      <div class="address text-m">
+      <div class="address text-m--black">
         <p>Komm uns besuchen!
           <br>Fraunhoferstr. 13, Kiel
         </p>
@@ -72,7 +72,7 @@
 
     <section class="café__content café__content--info">
       <h3>Bio und Fair</h3>
-      <p class="text-m" id="bio-text">Weit hinten, hinter den Wortbergen, fern der Länder
+      <p class="text-m--black" id="bio-text">Weit hinten, hinter den Wortbergen, fern der Länder
         Vokalien und Konsonantien leben die Blindtexte. Weit hinten, hinter
         den Wortbergen, fern der Länder Vokalien und Konsonantien leben die
         Blindtexte. Und das alles in bester Bio Qualität</p>
@@ -178,18 +178,19 @@
 
   <!--HERKUNFT-->
   <main class="herkunft">
-    <section class="herkunft__text1">
-      <div class="füreinezeilendivnervtecht">
+    <section class="herkunft__textbox">
+      <div class="herkunft__text1">
         <h3>Herkunft</h3>
-        <p class="text-m">Weit hinten, hinter den Wortbergen,
+        <p class="text-m--white">Weit hinten, hinter den Wortbergen,
           <br>fern der Länder Vokalien und
           <br>Konsonantien leben die Blindtexte.
           <br>Und das alles in bester Bio Qualität
         </p>
-        <p class="text-m">mehr</p>
+        <a href="_herkunft/index.html" role=button class="text-m--white">mehr</a>
       </div>
     </section>
 
+    <!--INHALT-->
     <section class="herkunft__text2">
       <div class="dassteckt">
         <h2>Das steckt drin</h2>
@@ -222,12 +223,21 @@
     </section>
     </div>
 
+    <!--KOMM VORBEI-->
     <div class="herkunft__visit">
       <section class="herkunft__text3">
         <!--weiß grad nicht wo ichs hinsortieren soll..aber eig nich herkunft-->
         <h2>Komm vorbei</h2>
       </section>
-      <img id="img-map" src="img/MAP_KAFFEE_Bildschirmfoto 2020-12-14 um 09.59 1.png" alt="screenshot-google-maps">
+      <!-- <img id="img-map" src="img/MAP_KAFFEE_Bildschirmfoto 2020-12-14 um 09.59 1.png" alt="screenshot-google-maps">-->
+      <div class="visit__map">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=10.118724703788759%2C54.34034445733928%2C10.125805735588076%2C54.34332778443026&amp;layer=mapnik&amp;marker=54.3418361479485%2C10.122265219688416">
+        </iframe><br><small><a class="visit__map--bigger"
+            href="https://www.openstreetmap.org/?mlat=54.34184&amp;mlon=10.12227#map=18/54.34184/10.12227">
+            Größere Karte anzeigen</a></small>
+      </div>
+      <!--AKTUELL IST MEINE MAP NICHTIN DER GEWOLLTEN WIDTH. why?-->
     </div>
   </main>
 
@@ -244,7 +254,7 @@
           <br>Sa 11–18 Uhr
         </p>
       </div>
-      <div class="text-m-imp">
+      <div class="text-m--imp">
         <p>Impressum
           <br>Datenschutz
         </p>

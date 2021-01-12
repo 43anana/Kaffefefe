@@ -1,0 +1,38 @@
+//BASIC PROJECT DEFINITIONS   E.G. 
+
+*,
+::after,  //bisher warens nur normale elements, deshalb die auch//
+::before {
+  margin:0;
+  padding:0;
+  box-sizing:inherit;
+}
+
+html {
+  font-size:62.5%; /*1 rem =>root font size, normalerweise 16, wollen aber 10 
+  (damit:10 = 1 rem). für user friendly nehmen wir aber: 10:16=62.5% =10 px falls default 16px
+  merke:rem geht bei vielen alten explorern nicht*/
+}
+
+body {
+  box-sizing:border-box;
+}  
+
+/*body {
+  background: blue;
+
+  @media (min-width: 768px) {
+    background: linear-gradient(#e98a00, #f5aa2f);
+  }
+}
+
+main {
+  div {
+    color: yellow;
+
+    @media (min-width: 768px) {
+      color: var(--div-color);
+    }
+  }
+}
+*/

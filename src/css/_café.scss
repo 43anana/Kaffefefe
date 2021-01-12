@@ -16,6 +16,9 @@
             position:absolute;
             left:2.4rem;
             top:5.375rem;
+            #roest-text {
+                margin-top:2rem;
+            }
         }
 
         &--info{
@@ -23,8 +26,11 @@
             position:absolute;
             left:2.4rem;
             top:47.375rem;
+            >h3 {
+                margin-bottom:1.2rem;
+            }
         }
-        }
+    }
     
     
   } 
@@ -43,9 +49,9 @@
     margin-top: 40px;/*760 (höhe des img) - 720 (aka bottom des darüber liegenden divs)= 40px*/
 }
 
-#bio-text {
+/*#bio-text {
     margin-top:0;
-}
+}*/
 #plant-img {
     width:241px;
     height:160px;

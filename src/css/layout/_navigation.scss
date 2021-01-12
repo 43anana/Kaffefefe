@@ -1,0 +1,185 @@
+.topnav {
+  //nur zum üben: background-color: rgba(0, 128, 0, 0.288);
+  position: sticky;
+  width: 375px;
+  height: 55px;
+  // left:20px;
+  //top:95px;
+  z-index: 1300;
+  display: flex;
+  flex-direction: row;
+  &__logobox {
+    /* position:relative;
+                left: 6.4%;
+                top: 18.18%;*/
+    margin-left: 8%; //angepasst an button wobei button, alt von figma 6.4%;
+    margin-top: 4%; //alt von figma 18.18%;
+    position: fixed;
+    // display:flex;
+    // z-index:1400;
+    &__logo {
+      color: white;
+      width: 35px;
+      height: 35px;
+      // position:absolute;
+    }
+  }
+  /*&__burgerbox {          //unnötig weil nav mti schmetti gebaut
+            position:relative;
+            left:87.2%; //da steht eigentlich:87.2%;=237 px ->das ist aber zu weit rechts..hab ich was geerbt? //
+            top: 38.18%;   //auch hier entspricht das den 21 px die auf figma von den 55 gesamt height abgehen//
+            right:6.4%;
+            &__burgermenu {
+                color:white;
+                position:absolute;
+                height:1.25rem;
+                width:2.35rem;
+            }
+        }*/
+}
+
+.topnav {
+  &__checkbox {
+    display: none;
+  }
+  &__button {
+    background-color: none;
+    height: 1.25rem;
+    width: 2.35rem;
+    position: fixed;
+    top: 4%; //ja also ich find auf figma immer nur pixel..oh man:D das ist jetzt eine beliebige %Zahl
+    right: 8%; //das kann ich umrechnen von px..waren 6 rem
+    z-index: 2000;
+    text-align: center; //er benutztn box shadow (nav part II), do i need?
+  }
+  &__background {
+    width: 1rem;
+    height: 0.6rem;
+    position: fixed; //ähnlich wie absolut, kommt eben mit beim scrollen
+    top: 4%; //etwas größer damit er safe verschwindet
+    right: 8%; //rop und right wie beim button
+    background-color: $color-black; //warum brauchen wir den bg? hier setzt er seine farbe und macht ihn später görßer
+    z-index: 1000; //geht nur bei definierten positions..
+    transition: transform 0.8s; //.8s bis bg auftaucht
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); //was macht das ? hatte das auf figma gesehen
+  }
+  &__nav {
+    width: 37.5rem;
+    height: 100vh; //ich hatte erst 66.7rem aber vp ist besser oder? hab auf figma nur absolute pixel gefunden 667:10=67.7
+    position: fixed;
+    top: 0; //das heißt es fängt in der top right corner an
+    right: 0; //schreibe: links:0; um es von links schweben zu lassen
+    z-index: 1500; //hinter button vor background
+    opacity: 0; //op + width damit links invisible und unklickbar sind
+    width: 0;
+    transition: all 0.8s; //width+op in .8s auftauchend
+  }
+
+  &__list {
+    position: absolute;
+    top: 25.1rem; //251 px von 667 = 37.6% aber geht das hier überhaupt.so schenke man mir gehirn
+    left: 6rem;
+    list-style: none; //text-align wollen wir wenn linksbündig aber das ist gerade default glaub ich
+    text-align: left;
+    width: 100%;
+  }
+  &__item {
+    margin: 1.2rem, 0; //Abstand Figma 24-28 px, also halt oben unten 1.2rem
+  }
+  &__link {
+    //ist eig ne h3, aber da gibts auch ne margin, kb umzuschreiben
+    text-decoration: none;
+    color: $color-white;
+    font-weight: 900;
+    font-size: 3.2rem;
+    display: inline-block; //das macht er im vid, brauch ich das hier?
+  }
+
+  //FUNCTIONALITY
+  //d.h. label(button) drücken = 1. bg kommt hervor, 2. nav taucht wieder auf
+
+  &__checkbox:checked ~ &__background {
+    //~ ist ein sibling
+    transform: scale(300); //vergrößert background.
+  }
+  //wenn ich background wegnehme öffnet sich kein schwarzes fenster mehr, wenn background drin und hierunter op und width
+  //weiterhin null:
+
+  &__checkbox:checked ~ &__nav {
+    opacity: 1;
+    width: 100%;
+  }
+
+  //ICON
+  &__icon {
+    position: relative;
+    &,
+    &::before,
+    &::after {
+      //SEHE NUR NORMAL; KEIN AFTER AND BEFORE
+      height: 0.3rem;
+      background-color: $color-white;
+      display: inline-block;
+    }
+    &::before,
+    &::after {
+      content: "";
+    }
+    & {
+      width: 2.4rem;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    &::before {
+      position: absolute;
+      top: -0.6rem;
+      left: 0;
+      width: 2.4rem;
+    }
+    &::after {
+      position: absolute;
+      top: 0.6rem;
+      left: 0;
+      width: 1.8rem;
+      height: 3px;
+    }
+
+    &--x {
+      //svg graphik burger menu close
+      visibility: hidden;
+    }
+  }
+
+  //BURGER CLOSE          (1.burger verschwindet, 2. x taucht auf)
+  &__checkbox:checked + &__button &__icon {
+    //mit + -->adjacent sibling, ohne plus ist es ein child element
+    background-color: transparent;
+    &::before,
+    &::after {
+      background-color: transparent;
+    }
+  }
+
+  &__checkbox:checked + &__button &__icon--x {
+    visibility: visible;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+//ALTERNATIVE OHNE SVG VON SCHMETTI, unfertig
+/*
+&__checkbox:checked + &__button &__icon &--xefore {       
+    transform:rotate(135deg);
+    top:0;
+}
+
+&__checkbox:checked + &__button &__icon::after {        
+    transform:rotate(-135deg);
+    top:0;
+}
+*/

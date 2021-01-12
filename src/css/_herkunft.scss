@@ -15,21 +15,25 @@
     flex-wrap: nowrap ;   //nochmal nachlesen pls
     /*position:absolute;
     top:0;  brauch ich ja jetz auch nich mehr oder*/
-    &__text1 {
+    &__textbox {
       background-image: linear-gradient(rgba($color-anthra, .5), rgba($color-anthra, .5)), url(../img/FEND-Coffee-bags-2.png);
       text-align:center;
-      height:332px;
+      height:332px;  //eig 50 vh aber ich bin noch nicht so fit darin
       color:#fff;
-      display:flex;
-      flex-direction: column;
-      .füreinezeilendivnervtecht{
-        margin-top:8.7rem;
-        >p,
-        >h3 {
-            color:#fff;
-        }
-      }
     }
+    &__text1{
+        display:flex;
+        flex-direction: column;
+        margin-top:8.7rem;
+        >p{
+          margin-top:1.2rem;
+        }
+        >a {
+            text-decoration: none;
+            margin-top:2rem;
+        }
+    }
+    
     &__text2{
 // so was kann bei flex einfach weg ne?!    top:392px;
     width: 375px; //kann eig weg oder?
@@ -91,6 +95,16 @@
         color:$color-black;
         margin-bottom:35px;
       }
+    }
+  }
+  .visit__map {
+    width:375px;
+    height:231px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;    //warum geht das nicht,  irgendwas verpeile ich gerade die main axis ist doch gerade y?
+    &--bigger {                 //bzw. meine neue frage ist dann wieso erbt er das flexen nicht? erben die nie flex?
+      color:$color-anthra;
     }
   }
 
