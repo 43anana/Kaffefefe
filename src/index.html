@@ -31,7 +31,7 @@
     <!--empty background nbsp-->
     <nav class="topnav__nav">
       <ul class="topnav__list">
-        <li class="topnav__item"><a href="_café/index.html" class="topnav__link">Das Café</a></li>
+        <li class="topnav__item"><a href="_cafe-page/index.html" class="topnav__link">Das Café</a></li>
         <li class="topnav__item"><a href="_herkunft/index.html" class="topnav__link">Herkunft</a></li>
         <li class="topnav__item"><a href="_shop/index.html" class="topnav__link">Shop</a></li>
       </ul>
@@ -40,43 +40,46 @@
 
   <!--HEADER-->
   <header class="header">
-    <!--<div class="header__content">-->
     <div class="header__text">
       <h1 class="title_primary">
         <span class="title_primary--main">Rustica</span>
         <span class="title_primary--sub">Bio und Fair seit 1991</span>
       </h1>
     </div>
-    <a class="btn btn-shop" role="button" href="_shop/index.html">Zum Shop</a>
+    <a class="btn btn-shop text-m--white" role="button" href="_shop/index.html">Zum Shop</a>
     </div>
   </header>
 
   <!--CAFÉ PREVIEW-->
-  <main class="café">
-    <section class="café__content café__content--location">
-      <!--lieber article?oder nur ein div?-->
-      <h2>Rösterei & Café</h2>
-      <p class="text-m--black" id="roest-text">Kaffee aus Kiel, direkt gehandelt
-        und geröstet in der eigenen Rösterei, serviert im
-        gemütlichen Café in der Innenstadt.</p>
-      <div class="address text-m--black">
-        <p>Komm uns besuchen!
-          <br>Fraunhoferstr. 13, Kiel
-        </p>
-        <p>Mo – Fr 8–18 Uhr
-          <br>Sa 11–18 Uhr
-        </p>
+  <main class="cafe">
+    <section class="cafe__content cafe__content--location">
+      <div class="cafe__desktop">
+        <h2>Rösterei & Café</h2>
+        <p class="text-m--black" id="roest-text">Kaffee aus Kiel, direkt gehandelt
+          und geröstet in der eigenen Rösterei, serviert im
+          gemütlichen Café in der Innenstadt.</p>
+        <div class="address text-m--black">
+          <p>Komm uns besuchen!
+            <br>Fraunhoferstr. 13, Kiel
+          </p>
+          <p>Mo – Fr 8–18 Uhr
+            <br>Sa 11–18 Uhr
+          </p>
+        </div>
       </div>
-      <img id="café-img" alt="café-img" src="img/FEND-Coffee-shop.png">
+      <img id="cafe-img" alt="café-img" srcset="img/FEND-Coffee-shop.png 1x, img/FEND-Coffee-shop-2x.png 2x">
     </section>
 
-    <section class="café__content café__content--info">
-      <h3>Bio und Fair</h3>
-      <p class="text-m--black" id="bio-text">Weit hinten, hinter den Wortbergen, fern der Länder
-        Vokalien und Konsonantien leben die Blindtexte. Weit hinten, hinter
-        den Wortbergen, fern der Länder Vokalien und Konsonantien leben die
-        Blindtexte. Und das alles in bester Bio Qualität</p>
-      <img id="plant-img" alt="coffeeplant-img" src="img/FEND-coffee-plant.png">
+    <section class="cafe__content cafe__content--info">
+      <div class ="info-desktop">
+        <h3>Bio und Fair</h3>
+        <p class="text-m--black" id="bio-text">Weit hinten, hinter den Wortbergen, fern der Länder
+          Vokalien und Konsonantien leben die Blindtexte. Weit hinten, hinter
+          den Wortbergen, fern der Länder Vokalien und Konsonantien leben die
+          Blindtexte. Und das alles in bester Bio Qualität</p>
+        <a href="_herkunft/index.html" class="info-hidden-mehr text-m--black">mehr</a>
+      </div>
+      <img id="plant-img" alt="coffeeplant-img" srcset="img/FEND-coffee-plant.png 1x, img/FEND-coffee-plant-2x.png 2x">
     </section>
     </div>
   </main>

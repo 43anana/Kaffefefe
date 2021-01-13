@@ -17,7 +17,6 @@
 @import "pages/home";
 //meine subpage ordner in pages ballern!
 
-
 :root {
   --div-color: red;
 }
@@ -31,31 +30,14 @@
   width: 66%;
   padding-top: 56%; /* friends ist 16:10, bsp. 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
 
-&__responsive {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: $color-black;
+  &__responsive {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: $color-black;
+  }
 }
-}
-
-/*
-// Small devices (landscape phones, 576px and up)
-@media (min-width: 576px) { ... }
-
-// Medium devices (tablets, 768px and up)
-@media (min-width: 768px) { ... }
-
-// Large devices (desktops, 992px and up)
-@media (min-width: 992px) { ... }
-
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { ... }
-
-// Very large desktop devices (1920px and up)
-@media (min-width: 1920px) { ... }
-*/

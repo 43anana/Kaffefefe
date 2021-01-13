@@ -1,5 +1,4 @@
-//er hat title-heading auch hier
-
+//er hat title-heading auch hier, ich aktuell bei header
 
 
 //ich kann so oft splitten wie ich will, also hier n teil des bodys, wo anders..
@@ -37,6 +36,10 @@ h2 {
     font-size:1.4rem;
     line-height:1.8rem;
     color:$color-black;
+    @include respond (desk) {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+    }
   }
   .text-m--white{
     font-family:"Roboto", sans-serif;
@@ -64,5 +67,9 @@ h2 {
     :first-child{
         margin-right:17px;
         width:156px;
+        @include respond (desk) {
+          margin-right: 1.6rem;
+          width:58.7%; //298px von 507px breite des cafe__desktop 
+        }
     }
   }

@@ -1,44 +1,57 @@
 .header {
-    width:375px; 
+    width:100%; 
     height:500.25px; //75vh will nciht in meinen kopf..schneidet doch was ab ??!
-    position:relative;
-    top:0;
+   /* position:relative;
+    top:0;*/
     background-image: linear-gradient(rgba(26, 26, 26, 0.3), rgba(26, 26, 26, 0.3)), url(../img/FEND-Coffee-latte-art-3.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position:top;
-    /*&__content{       kann raus!
-        width: 375px;
-        height: 500.25px;
-        position:absolute;
-        left:102px;
-        background-image: linear-gradient(rgba(26, 26, 26, 0.3), rgba(26, 26, 26, 0.3)), url(../img/FEND-Coffee-latte-art-3.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position:top;
-*/
+    display:flex;                   //welche display form will ich am liebsten, wenn in meinem [header] nur ein div ist?
+    flex-direction: column;
+    align-items:center;
+    @include respond(desk) {
+        width:100%;
+        height:11.97%;//65 vh ..wie oben..i don´t get it.. 681 px von 5688 => 12%
+        justify-content: center;
+    }
+
     &__text {
-        text-align:center;
-        display:inline-block;
-        position:absolute;
-        top:50%;
-        left:50%;
-        transform:translate(-50%, -50%);
+        display:flex;
+        flex-direction: column;
+        align-items:center;
+        margin-bottom:10.3rem; //103px Abstand zum button, noch in % machen!
+        margin-top:50%;//199px von header-height 500.25 = 39.78% in mobile abe das entspricht nicht dem Bild von Figma. das deutet auf just-cont hin
+        @include respond (desk) {
+         margin-top:11rem;//  margin-top:11rem;       //die elf kommen, weil zw. oben und unten 40 px aka
+            margin-bottom:15rem;      //21.9%;//149px von 681 =22.9%, wobei 75 vh also 1%=0.75 * 22.9=16.4%
+        }
+
         .title_primary{                             //er hat das bei TYPO
             color:$color-white;
+            display:flex;
+            flex-direction: column;
+            align-items: center;
+               
             &--main {
                 font-family:"Roboto", sans-serif;
                 font-weight:900;
                 font-size:6.4rem;
-                line-height:75px;
+                line-height:7.5rem;
+                @include respond (desk) {
+                    font-size:9.6rem;
+                    line-height:11rem;
+                    //max-resolution: top 38.1%;  //260 von 681 px
+                }
             }
             &--sub {
-                font-weight:400;
+                font-weight:400;            //aus uverstandenem Grund X ist die size und height hier gleich für desktop
                 font-size:1.8rem;
-                line-height:21px;
+                line-height:2.1rem;
+               
             }
         }
-        }
+     }
     //}
 }
 

@@ -98,19 +98,18 @@
     }
   }
   .visit__map {
-    width:375px;
-    height:231px;
-    display:flex;
-    flex-direction: column;
-    justify-content: center;    //warum geht das nicht,  irgendwas verpeile ich gerade die main axis ist doch gerade y?
+    max-width:375px;
+    height:auto;//231px;
+    //warum geht das nicht,  irgendwas verpeile ich gerade die main axis ist doch gerade y?
     &--bigger {                 //bzw. meine neue frage ist dann wieso erbt er das flexen nicht? erben die nie flex?
       color:$color-anthra;
+      margin-bottom:20px;
     }
   }
 
 
-  #img-map {
+  /*#img-map {
     width:375px;
     height:231px;
   //  top:1073px; //1038 + 35px;
-  }
+  } */

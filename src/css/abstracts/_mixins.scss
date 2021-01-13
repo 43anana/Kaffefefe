@@ -1,8 +1,55 @@
 //etwas, das "not gonna output any css" z.b. MIXINS VARIABLES
 
-/*{
-    position:absolute;
-    top:50%;
-    left:50%;
-    transform:translate(-50%, -50%);
-}*/
+/*
+$breakpoint argument choices:
+[bis 576        normal style]
+-phone-land     media-sm        (beieric)
+-tablet         media-md
+-desk           media-lg
+-xl-desk       media-xl
+-xxl-desk        media-xxl
+
+if: makes a task and if result of it is true somethign happens :D
+*/
+
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == phone-land { 
+      @media (min-width: 36em) { @content };
+    } //576px and up
+  
+  @if $breakpoint == tablet {
+    @media (min-width: 48em) { @content };
+    } //786px and up
+  
+  @if $breakpoint == desk {
+    @media (min-width: 62em) { @content }; //992 and up
+  }
+  @if $breakpoint == xl-desk {
+    @media (min-width: 75em) { @content };     //1200 and up
+  }
+  @if $breakpoint == xxl-desk {
+    @media (min-width: 120em) { @content };
+     //1920 and up
+  }
+}
+
+/*NOTE: media queries auch nicht in piexels! aber: werden nicht von der root size effected sondern immer
+browser fontsize, default 16px. Nehmen also EM (weil recomm). also px : 16
+
+
+/* Alternativ kann ich auch die mixins einzeln schreiben, aber dann muss ich sie ja auch immer einzeln eintragen. buh. bsp:
+  
+        @mixin respond-phone {
+            @media (min-width:576px) { @content };
+        }
+ 
+ und in die base:   @include media-md {
+                        font-size: 20rem;
+                    }
+  */
+
+
+  //ORDER FÜR MIXINS: Base + Typo > general layout +grid > page layout > components
+  
+

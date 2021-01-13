@@ -1,38 +1,45 @@
-//BASIC PROJECT DEFINITIONS   E.G. 
+//BASIC PROJECT DEFINITIONS   E.G.
 
 *,
 ::after,  //bisher warens nur normale elements, deshalb die auch//
 ::before {
-  margin:0;
-  padding:0;
-  box-sizing:inherit;
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
 }
 
 html {
-  font-size:62.5%; /*1 rem =>root font size, normalerweise 16, wollen aber 10 
+  font-size: 62.5%; /*1 rem =>root font size, normalerweise 16, wollen aber 10 
   (damit:10 = 1 rem). für user friendly nehmen wir aber: 10:16=62.5% =10 px falls default 16px
   merke:rem geht bei vielen alten explorern nicht*/
+
+  @include respond(phone-land) {
+    font-size: 50%; //1 rem = 8px; 8/16=50%
+  }
+  @include respond(tablet) {
+    font-size: 56%; //1 rem = 9px; 9/16=56,25%
+  }
+  @include respond(desk) {
+    font-size: 62.5%; //1 rem =10px
+  }
+  @include respond(xl-desk) {
+    font-size: 75%; //1 rem = 12 px, 12/16=75%
+  }
+  @include respond(xxl-desk) {
+    font-size: 87.5%; //1rem = 14 px, 14/16=87.5%
+  }
 }
 
 body {
-  box-sizing:border-box;
-}  
-
-/*body {
-  background: blue;
-
-  @media (min-width: 768px) {
-    background: linear-gradient(#e98a00, #f5aa2f);
+  box-sizing: border-box;
+  display:block;
+  width:375px;
+  height:4030px;
+  @include respond(desk) {
+    width:1440px;
+    height:5688px;
   }
 }
 
-main {
-  div {
-    color: yellow;
-
-    @media (min-width: 768px) {
-      color: var(--div-color);
-    }
-  }
-}
-*/
+//height mobile: 4030px; width mobile:375px;
+//height desktop: 5688px; width:1440px;

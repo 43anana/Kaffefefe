@@ -2,17 +2,24 @@
     width: 375px;
     height: 910px;  /* 382 cafe + 53.75 top + 440 plant (top/bot inkl) =875.75px IN PROZENT!!*/
     background-color:$color-anthra;  /*scss einführen!!!!!!!!!!*/
+    @include respond (desk) {
+      width:100%;
+      height:107.6rem;
+    }
       &__outline {
         width: 327px;
         position:absolute;
         left:24px;
-        display:flex;
-        flex-direction: column;
+        @include respond (desk) {
+          width: 86.1%;  // das erbt von desktop 1240 wie bei cafe 
+          position:unset; //setzt das absolut zurück
+          margin:auto;  //macht es mittig :)
+        }
       }
       &__content {
         display:flex;
         flex-direction: column;
-        flex-wrap: nowrap;
+        flex-wrap: nowrap;      //sollte ich hier display:block nehmen für mobile?
         >h2{
           color:#fff;
           margin-bottom:40px;
@@ -22,6 +29,14 @@
         >a {
           margin-bottom:60px;
           margin-top:40px;
+        }
+        @include respond (desk) {
+          justify-content: space-between;
+          margin:0;     //VERTIKAL muss ich noch setzen zwischen h und den blends udn button
+          //flex-direction:row;
+          //justify-content: center;
+          //align-items: ;
+          //flex-wrap: wrap;
         }
       }
       &__blends{    //wäre nach BEM hier so was wie div-blends sinnvoller?
@@ -40,6 +55,12 @@
             margin-bottom:11px;
           }
         }
+        @include respond (desk) {
+          margin:0;
+          flex-direction:row;
+          justify-content: center;
+        }
+
       }
   }
   .blend-img-box{   //es funktioniert..aber würde man es überhaupt nesten? //immerhin ist es dann am gleichen ort. fand umbenennen aber nicht so eingängig
