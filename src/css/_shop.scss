@@ -1,15 +1,8 @@
   .shop{
-    width: 375px;
-    height: 910px;  /* 382 cafe + 53.75 top + 440 plant (top/bot inkl) =875.75px IN PROZENT!!*/
     background-color:$color-anthra;  /*scss einführen!!!!!!!!!!*/
     @include respond (desk) {
-      width:100%;
-      height:107.6rem;
     }
       &__outline {
-        width: 327px;
-        position:absolute;
-        left:24px;
         @include respond (desk) {
           width: 86.1%;  // das erbt von desktop 1240 wie bei cafe 
           position:unset; //setzt das absolut zurück
@@ -19,12 +12,16 @@
       &__content {
         display:flex;
         flex-direction: column;
-        flex-wrap: nowrap;      //sollte ich hier display:block nehmen für mobile?
+        flex-wrap: nowrap;      
         >h2{
           color:#fff;
           margin-bottom:40px;
           margin-top:60px;
           line-height: 34px;
+          @include respond (desk) {
+            line-height: 5.6rem;  //auch von figma, normalerweise hat die h2 1.1%
+            justify-content: space-between;
+          }
         }
         >a {
           margin-bottom:60px;
@@ -46,33 +43,34 @@
         color:#fff;
 
         &--preview{
-          width:155px;
-          height:277px;
+          margin-right: 16px;
+          width: 50%;
           .subhead {
             margin-top:11px;
           }                         //eeeyy wieso macht weder subhead noch img das -.-
           >div{
             margin-bottom:11px;
           }
+          &:last-child {
+            margin: 0;
+          }
+          @include respond (desk) {
+          }
         }
         @include respond (desk) {
           margin:0;
-          flex-direction:row;
-          justify-content: center;
+          flex-wrap:nowrap; //vllt will ich das gar nicht
+          justify-content: space-between;
         }
 
       }
   }
   .blend-img-box{   //es funktioniert..aber würde man es überhaupt nesten? //immerhin ist es dann am gleichen ort. fand umbenennen aber nicht so eingängig
-    width:155px;
-    height:208px;
     background-color: #fff;
     position:relative;
+    @include respond (desk) {
+    }
     .blend-img {
-      width: 140.31px;
-      height:188.32px;
-      position:absolute;
-      text-align:center;
     }
   }
 
@@ -114,16 +112,5 @@
   
   //für personalisierung//
   
-  #kaffee1 {
-  margin-right:16px;
-  margin-bottom:40px;
-  }
-  
-  #kaffee2 {
-    margin-bottom:40px;
-  }
-  
-  #kaffee3 {
-  margin-right:16px;
-  }
+
     

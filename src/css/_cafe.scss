@@ -1,0 +1,135 @@
+.cafe{
+   width:100%;//59.6rem; 
+    //height:87.575rem; //875.75px///* 382 cafe + 53.75 top + 440 plant (top/bot inkl) =875.75px*/
+
+    background-color:white; //sprach was gegen body white machen?
+    //flex-direction: column;    //
+    //align-items: center;                //zentriert --location und --info auf x-achse
+    
+    //INSGESAMT BLÖD BENANNT, weil __desktop und __img die zwei divs von --location sind aber weil Namen sonst zu lang nur mit cafe block betitelt
+    &__desktop{                         //die Abstände stimmen noch nicht ganz, auf figma Ubruch nach "eigenen" aber erstma o.k.
+        @include respond (desk) {
+            display:flex;
+            flex-direction: column;
+            width:50%;                   //denkblockade:wieso muss das nicht 50 sein, um die lücke dazwischen einzufügen?
+            margin-right:10%;     //da ich große Lücke zw. zwei 50% breiten will kann ich nicht justify-content: space-between; nehmen, sondern margin-right
+        }
+
+        #roest-text {
+            margin-top:2rem;
+            // display:inline-block;
+            @include respond (desk) { 
+                margin-top:3.5rem;   
+            }
+        }
+    }
+    &__img-box {            //für mobile immer noch unschön mit px
+        // display:inline-block;
+        width:50%; //24.1rem;
+        height:auto; //18.2rem;
+        margin-left:50%;
+        margin-top:10%;
+        
+        @include respond (desk) {
+            width:50%;
+            margin:0;
+        }
+
+        >img {
+        @include respond (desk) {
+            width:100%;             //eigentlich hat eric das zentral für images festgelegt in der _base -->warum geht das nicht ?
+            }  
+        }
+    }
+
+    &__content {
+        color:#000;
+        width:86%;
+        margin:auto;
+        padding-top:10%;
+
+
+        &--location{
+            width:86%;
+            @include respond (desk) {       //habe jetzt erst mal die m-top (124px) und m-bottom (141px im bsp) rausgenommen
+                display:flex;
+                flex-direction: row;//kann wegbleiben weil default or sons tinherited?
+                max-width: $max-width;
+                align-items: flex-start;        //beide oben auf der y-achse
+                width:86%;                      //wieso erbt es die width von mobile nicht ?? und von __content?
+            }
+        }
+        
+
+        &--info{
+            padding-bottom:10%;//was würde man eher nehmen, margin oder padding?..der hg ist ja eh weiß
+
+            @include respond (desk) {
+                display:flex;
+                flex-direction: row-reverse;
+                align-items: flex-start;
+            }
+            
+
+            .info-desktop {             //der Text hat nen padding von dem ich noch nciht weiß wo es herkommt in MOBILE
+                @include respond (desk) {
+                width:50%;
+                margin-left:10%;     //Abstand zw. Bild und Text
+                }
+
+                >h3 {
+                    margin-bottom:1.2rem;
+                    @include respond (desk) {
+                        margin-bottom:2.4rem;
+                    }
+                }
+                .info-hidden-mehr {
+                    display:none;   //visibility:hidden; nimmt platz weg!
+                    @include respond (desk) {
+                       display:block;//s.o. visibility:visible; aber jetzt ist es block obwohls im flex is??
+                        text-decoration: none;
+                        margin-top:0.9rem;
+                    }
+                }
+            }
+
+            .info-img-box {
+                width: 73%; //241px; von 327
+                height:auto;
+                margin-left:0;
+                margin-top:10%;
+                @include respond (desk) {
+                    width:50%;       
+                    margin-top:0;
+                }
+                
+                >img {
+                    width:100%;
+                    height:auto;
+                }
+            }
+        }
+        
+    }    
+}
+
+
+
+    
+    
+  
+//allgemeien Nesting Frage: würde ich die jetzt irgendwie oben noch drin verwurschteln wollen, oder tatsächlich nur 
+//alles was sich nach dem bem prinzip aufschlüsseln lässt/so benannt ist?
+/*#cafe-img {
+    width:24.1rem;
+    height:18.2rem;
+    margin-left:86px;
+   margin-top:40px;
+    @include respond (desk) {
+        width:100%;
+        height:auto;
+        margin-top:0;
+        margin-left:0;
+    }
+}*/
+
