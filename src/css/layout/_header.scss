@@ -1,30 +1,38 @@
 .header {
     width:100%; 
-    height:500.25px; //75vh will nciht in meinen kopf..schneidet doch was ab ??!
-   /* position:relative;
-    top:0;*/
+    height:75vh;
     background-image: linear-gradient(rgba(26, 26, 26, 0.3), rgba(26, 26, 26, 0.3)), url(../img/FEND-Coffee-latte-art-3.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position:top;
-    display:flex;                   //welche display form will ich am liebsten, wenn in meinem [header] nur ein div ist?
+    display:flex;                  
     flex-direction: column;
     align-items:center;
+    justify-content: center;
+    @include respond (tablet) {
+        width:100%;
+        height:60vh;
+        background-position:center;
+    }
     @include respond(desk) {
         width:100%;
-        height:11.97%;//65 vh ..wie oben..i don´t get it.. 681 px von 5688 => 12%
-        justify-content: center;
+        height:65vh;//11.97%;//65 vh ..wie oben..i don´t get it.. 681 px von 5688 => 12%
+        
     }
 
     &__text {
-        display:flex;
+        /*display:flex;
         flex-direction: column;
         align-items:center;
+        justify-content: center;*/
         margin-bottom:10.3rem; //103px Abstand zum button, noch in % machen!
-        margin-top:50%;//199px von header-height 500.25 = 39.78% in mobile abe das entspricht nicht dem Bild von Figma. das deutet auf just-cont hin
+        //margin-top:50%;//199px von header-height 500.25 = 39.78% in mobile abe das entspricht nicht dem Bild von Figma. das deutet auf just-cont hin
+        @include respond (tablet) {
+           margin-bottom:4rem;
+       }
         @include respond (desk) {
-         margin-top:11rem;//  margin-top:11rem;       //die elf kommen, weil zw. oben und unten 40 px aka
-            margin-bottom:15rem;      //21.9%;//149px von 681 =22.9%, wobei 75 vh also 1%=0.75 * 22.9=16.4%
+         margin-top:5rem;//  margin-top:11rem;       //die elf kommen, weil zw. oben und unten 40 px aka
+            margin-bottom:5rem;      //21.9%;//149px von 681 =22.9%, wobei 75 vh also 1%=0.75 * 22.9=16.4%
         }
 
         .title_primary{                             //er hat das bei TYPO
@@ -52,91 +60,6 @@
             }
         }
      }
-    //}
+    
 }
 
-
-/*
-.navigation{
-  color:white;
-  background-color:black;
-  position: absolute;
-  width: 375px;
-  height: 667px;
-  left: 0px;
-  top: 0px;
-}*/
-
-/*
-.header{
-    width:596px;
-    height:500.25px; /*75vh schneidet ja was ab???;
-    position:relative;
-    top:0;
-    &__content{
-        width: 375px;
-        height: 500.25px;
-        position:absolute;
-        left:102px;
-        background-image: linear-gradient(rgba(26, 26, 26, 0.3), rgba(26, 26, 26, 0.3)), url(../img/FEND-Coffee-latte-art-3.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position:top;
-        &__text {
-            text-align:center;
-            display:inline-block;
-            position:absolute;
-            top:50%;
-            left:50%;
-            transform:translate(-50%, -50%);
-            .title_primary{
-                color:$color-white;
-                &__main {
-                    font-family:"Roboto", sans-serif;
-                    font-weight:900;
-                    font-size:6.4rem;
-                    line-height:75px;
-                }
-                &__sub {
-                    font-weight:400;
-                    font-size:1.8rem;
-                    line-height:21px;
-                }
-            }
-        }
-    }
-}
-
-
-.topnav {
-    background-color:none;
-    width:375px;
-    height:55px;
-    left:20px;
-    top:95px;
-    display:flex;
-    flex-direction: row;
-        &__logobox{
-                position:relative;
-                left: 6.4%;
-                top: 18.18%;
-            &__logo {
-                    color:white;    
-                    width:35px;    
-                    height:35px;    
-                    position:absolute; 
-            }
-        }
-        &__burgerbox {
-            position:relative;
-            left:87.2%;
-            top: 38.18%;   
-            &__burgermenu {
-                color:white;
-                position:absolute;
-                height:12.5px;
-                width:23.5px;
-            }
-        }
-    }
-*/

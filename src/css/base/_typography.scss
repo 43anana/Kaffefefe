@@ -9,7 +9,7 @@ body {    //man setzt keine height oder?
    // font-size: 16px;  //
     line-height:1.7;
     /*padding:20px;   wozu?ausm video glaub ich*/ 
-    background-color:rgb(124, 21, 21);
+    background-color:$color-white;
 }
 
 
@@ -43,7 +43,7 @@ h2 {
     font-size:1.4rem;
     line-height:1.8rem;
     color:$color-black;
-    @include respond (desk) {
+    @include respond (phone-land desk) {
       font-size: 1.8rem;
       line-height: 2.4rem;
     }

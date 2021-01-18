@@ -1,43 +1,25 @@
 .topnav {
-  //nur zum üben: background-color: rgba(0, 128, 0, 0.288);
   position: sticky;
   width: 100%;
-  // left:20px;
-  //top:95px;
+  height:50px;
   z-index: 1300;
   display: flex;
   flex-direction: row;
+  
   &__logobox {
-    /* position:relative;
-                left: 6.4%;
-                top: 18.18%;*/
-    margin-left: 8%; //angepasst an button wobei button, alt von figma 6.4%;
-    margin-top: 4%; //alt von figma 18.18%;
+    margin-left: 6%; //angepasst an button wobei button, alt von figma 6.4%;
     position: fixed;
-    // display:flex;
-    // z-index:1400;
+    top:2rem;
+    width:35px;
+    height:auto;
+    
     &__logo {
       color: white;
-      width: 35px;
-      height: 35px;
-      // position:absolute;
+      width:100%;
+      height:auto;   
     }
   }
-  /*&__burgerbox {          //unnötig weil nav mti schmetti gebaut
-            position:relative;
-            left:87.2%; //da steht eigentlich:87.2%;=237 px ->das ist aber zu weit rechts..hab ich was geerbt? //
-            top: 38.18%;   //auch hier entspricht das den 21 px die auf figma von den 55 gesamt height abgehen//
-            right:6.4%;
-            &__burgermenu {
-                color:white;
-                position:absolute;
-                height:1.25rem;
-                width:2.35rem;
-            }
-        }*/
-}
 
-.topnav {
   &__checkbox {
     display: none;
   }
@@ -46,10 +28,13 @@
     height: 1.25rem;
     width: 2.35rem;
     position: fixed;
-    top: 4%; //ja also ich find auf figma immer nur pixel..oh man:D das ist jetzt eine beliebige %Zahl
-    right: 8%; //das kann ich umrechnen von px..waren 6 rem
+    top: 3rem; //ja also ich find auf figma immer nur pixel..oh man:D das ist jetzt eine beliebige %Zahl
+    right: 6%; //das kann ich umrechnen von px..waren 6 rem
     z-index: 2000;
     text-align: center; //er benutztn box shadow (nav part II), do i need?
+    @include respond (desk) {
+      display:none;
+    }
   }
   &__background {
     width: 1rem;
@@ -76,6 +61,13 @@
     display:flex;
     align-items: center;
     justify-content: flex-start;
+    @include respond (desk) {
+      width:100&;
+      height:20%;
+      background-color: blue;
+      opacity:1;
+      z-index:4000;
+    }
   }
 
   &__list {
@@ -96,7 +88,7 @@
     color: $color-white;
     font-weight: 900;
     font-size: 3.2rem;
-    display: inline-block; //das macht er im vid, brauch ich das hier?
+    //display: inline-block; //das macht er im vid, brauch ich das hier?
   }
 
   //FUNCTIONALITY
@@ -114,6 +106,7 @@
     opacity: 1;
     width: 100%;
   }
+
 
   //ICON
   &__icon {
@@ -173,6 +166,32 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+
+
+
+//////////DESKTOP MENU
+.topnav-desktop {
+  display:none;
+  width:100%;
+  @include respond (desk) {
+    display: inline;
+    margin-right:0;
+    padding-right:6%;
+    padding-left:6%;
+  }
+  &__list {
+    display:flex;
+    justify-content: flex-end;
+    align-items:center;
+  }
+  &__item {
+    padding-left:10%;
+    >a {
+      font-weight: 500;
+      font-size:18px
+    }
   }
 }
 
