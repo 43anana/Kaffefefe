@@ -1,8 +1,7 @@
 .topnav {
   //nur zum üben: background-color: rgba(0, 128, 0, 0.288);
   position: sticky;
-  width: 375px;
-  height: 55px;
+  width: 100%;
   // left:20px;
   //top:95px;
   z-index: 1300;
@@ -55,6 +54,7 @@
   &__background {
     width: 1rem;
     height: 0.6rem;
+    visibility:hidden;
     position: fixed; //ähnlich wie absolut, kommt eben mit beim scrollen
     top: 4%; //etwas größer damit er safe verschwindet
     right: 8%; //rop und right wie beim button
@@ -64,7 +64,7 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); //was macht das ? hatte das auf figma gesehen
   }
   &__nav {
-    width: 37.5rem;
+    //width: 37.5rem;
     height: 100vh; //ich hatte erst 66.7rem aber vp ist besser oder? hab auf figma nur absolute pixel gefunden 667:10=67.7
     position: fixed;
     top: 0; //das heißt es fängt in der top right corner an
@@ -73,12 +73,16 @@
     opacity: 0; //op + width damit links invisible und unklickbar sind
     width: 0;
     transition: all 0.8s; //width+op in .8s auftauchend
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
   }
 
   &__list {
-    position: absolute;
-    top: 25.1rem; //251 px von 667 = 37.6% aber geht das hier überhaupt.so schenke man mir gehirn
-    left: 6rem;
+   // position: absolute;
+    //top: 25.1rem; //251 px von 667 = 37.6% aber geht das hier überhaupt.so schenke man mir gehirn
+   // left: 6rem;
+   margin-left:10%;
     list-style: none; //text-align wollen wir wenn linksbündig aber das ist gerade default glaub ich
     text-align: left;
     width: 100%;
@@ -100,6 +104,7 @@
 
   &__checkbox:checked ~ &__background {
     //~ ist ein sibling
+    visibility:visible;     //das muss ich machen, weil meine burgerbox keinen hintergrund oben hat, d.h.man sieht sonst n schwarzes ding
     transform: scale(300); //vergrößert background.
   }
   //wenn ich background wegnehme öffnet sich kein schwarzes fenster mehr, wenn background drin und hierunter op und width
