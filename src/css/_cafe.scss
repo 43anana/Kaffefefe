@@ -7,22 +7,7 @@
     //align-items: center;                //zentriert --location und --info auf x-achse
     
     //INSGESAMT BLÖD BENANNT, weil __desktop und __img die zwei divs von --location sind aber weil Namen sonst zu lang nur mit cafe block betitelt
-    &__desktop{                         //die Abstände stimmen noch nicht ganz, auf figma Ubruch nach "eigenen" aber erstma o.k.
-        @include respond (desk) {
-            display:flex;
-            flex-direction: column;
-            width:50%;                   //denkblockade:wieso muss das nicht 50 sein, um die lücke dazwischen einzufügen?
-            margin-right:10%;     //da ich große Lücke zw. zwei 50% breiten will kann ich nicht justify-content: space-between; nehmen, sondern margin-right
-        }
 
-        #roest-text {
-            margin-top:2rem;
-            // display:inline-block;
-            @include respond (desk) { 
-                margin-top:3.5rem;   
-            }
-        }
-    }
     &__img-box {            //für mobile immer noch unschön mit px
         // display:inline-block;
         width:50%; //24.1rem;
@@ -61,6 +46,22 @@
                 max-width: $max-width;
                 align-items: flex-start;        //beide oben auf der y-achse
                 width:86%;                      //wieso erbt es die width von mobile nicht ?? und von __content?
+            }
+            .location-desktop{                         //die Abstände stimmen noch nicht ganz, auf figma Ubruch nach "eigenen" aber erstma o.k.
+                @include respond (desk) {
+                    display:flex;
+                    flex-direction: column;
+                    width:50%;                   //denkblockade:wieso muss das nicht 50 sein, um die lücke dazwischen einzufügen?
+                    margin-right:10%;     //da ich große Lücke zw. zwei 50% breiten will kann ich nicht justify-content: space-between; nehmen, sondern margin-right
+                }
+        
+                #roest-text {
+                    margin-top:2rem;
+                    // display:inline-block;
+                    @include respond (desk) { 
+                        margin-top:3.5rem;   
+                    }
+                }
             }
         }
         

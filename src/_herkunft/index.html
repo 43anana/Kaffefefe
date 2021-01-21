@@ -4,20 +4,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Subpage</title>
   <link rel="stylesheet" href="../css/main.scss" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+  <title>Herkunft Page</title>
 </head>
 
 <body>
-  <h1>Hello coffee!</h1>
-  <main>
-    <a href="/">Home</a>
-    <div class="giphy">
-      <iframe class="giphy__responsive" src="https://giphy.com/embed/3o7TKp3cFUIxiCW8KI" title="coffee-plant"
-        alt="coffee-plant-giphy"></iframe>
-      <!--funktionert zwar grad nicht aber irgendwie nicht thema grad:D-->
+
+  <!--HEADER-->
+  <header class="header-origin">
+    <div class="topnav">
+      <div class="topnav__logobox">
+        <img class="topnav__logo" src="../img/Logo.svg" alt="logo">
+      </div>
+      <div class="topnav-mobile">
+        <input type="checkbox" class="topnav__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="topnav__button">
+          <span class="topnav__icon">&nbsp;
+            <svg class="topnav__icon--x" width="24" height="22" viewBox="0 0 24 22" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.5 2L12.5 11M21.5 20L12.5 11M12.5 11L3.5 20M12.5 11L21.5 2" stroke="white" stroke-width="3" />
+            </svg>
+          </span>
+        </label>
+        <div class="topnav__background">&nbsp;</div>
+        <!--empty background nbsp-->
+        <nav class="topnav__nav">
+          <ul class="topnav__list">
+            <li class="topnav__item"><a href="../_cafe-page/index.html" class="topnav__link">Das Café</a></li>
+            <li class="topnav__item"><a href="/" class="topnav__link">Herkunft</a></li>
+            <li class="topnav__item"><a href="../_shop/index.html" class="topnav__link">Shop</a></li>
+          </ul>
+        </nav>
+      </div>
+     
+    
+    <div class="topnav-desktop">
+      <ul class="topnav-desktop__list">
+        <li class="topnav-desktop__item"><a href="../_cafe-page/index.html" class="topnav__link">Das Café</a></li>
+        <li class="topnav-desktop__item"><a href="/" class="topnav__link">Herkunft</a></li>
+        <li class="topnav-desktop__item"><a href="../_shop/index.html" class="topnav__link">Shop</a></li>
+      </ul>
     </div>
+  </div>
+  </header>
+
+  <main>
+    <div class="origin-outline">
+      <section class="origin-intro">
+        <h2>Der Ursprung von Rustica</h2>
+        <p class="text-m--black">
+          Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien 
+          leben die Blindtexte. Abgeschieden wohnen sie in Buchstabhausen an der Küste
+          des Semantik, eines großen Sprachozeans. Ein kleines Bächlein namens Duden 
+          fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist ein
+            paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen.
+            Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht 
+            – ein geradezu unorthographisches Leben.
+        </p>
+        <div class="origin-video-box">
+         <!-- <iframe class="origin-video" src=""></iframe>-->
+        </div>
+      </section>
+      <section class="origin-anbau">
+        <h3>Die Anbaugebiete</h3>
+        <p class="text-m--black">
+          Weit hinten, hinter den Wortbergen, fern der Länder Vokalien 
+          und Konsonantien leben die Blindtexte. Abgeschieden wohnen sie
+          in Buchstabhausen an der Küste des Semantik, eines großen 
+          Sprachozeans. Ein kleines Bächlein namens Duden fließt durch 
+          ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist 
+          ein paradiesmatisches Land, in dem einem gebratene Satzteile in
+          den Mund fliegen.Nicht einmal von der allmächtigen Interpunktion
+          werden die Blindtexte beherrscht – ein geradezu unorthographisches Leben.
+        </p>
+        <div class="anbau-img-box">
+          <img alt="coffee-plant-2-img" src="../img/FEND-coffee-plant-2.png">
+        </div>
+      </section>
+
+      <section class="origin-wohl">
+        <h3>Das Wohl der Kaffeebauern</h3>
+        <p class="text-m--black">
+          Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und 
+          Konsonantien leben die Blindtexte. Abgeschieden wohnen sie in 
+          Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans. 
+          Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt
+          sie mit den nötigen Regelialien. Es ist ein paradiesmatisches Land, 
+          in dem einem gebratene Satzteile in den Mund fliegen.Nicht einmal 
+          von der allmächtigen Interpunktion werden die Blindtexte beherrscht –
+          ein geradezu unorthographisches Leben.
+        </p>
+        <div class="wohl-img-box">
+           <img alt="coffee-worker-img" src="../img/FEND-Coffee-worker.png">
+        </div>
+      </section>
+    </div>
+   
   </main>
+  <footer class="footer">
+    <section class="footer-text">
+      <div class="footer-title">
+              <img src="../img/Logo.svg" alt="logo">
+      <p class="rust">Rustica</p>
+      <p class="subhead">Café & Rösterei</p>
+      </div>
+  
+      <div class="address text-m-imp">
+        <p>Komm uns besuchen!
+          <br>Fraunhoferstr. 13, Kiel
+        </p>
+        <p>Mo – Fr 8–18 Uhr
+          <br>Sa 11–18 Uhr
+        </p>
+      </div>
+      <div class="footer-links text-m--imp">
+        <p>Impressum
+          <br>Datenschutz
+        </p>
+        <p>Café
+          <br>Shop
+          <br>Herkunft
+        </p>
+      </div>
+    </section>
+  </footer>
   <script src="../js/index.js"></script>
 </body>
 

@@ -12,13 +12,12 @@
     top:2rem;
     width:35px;
     height:auto;
-    
+  }
     &__logo {
       color: white;
       width:100%;
       height:auto;   
     }
-  }
 
   &__checkbox {
     display: none;
@@ -32,7 +31,7 @@
     right: 6%; //das kann ich umrechnen von px..waren 6 rem
     z-index: 2000;
     text-align: center; //er benutztn box shadow (nav part II), do i need?
-    @include respond (desk) {
+    @include respond (tablet) {
       display:none;
     }
   }
@@ -47,9 +46,9 @@
     z-index: 1000; //geht nur bei definierten positions..
     transition: transform 0.8s; //.8s bis bg auftaucht
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); //was macht das ? hatte das auf figma gesehen
-  }
+    }
+  
   &__nav {
-    //width: 37.5rem;
     height: 100vh; //ich hatte erst 66.7rem aber vp ist besser oder? hab auf figma nur absolute pixel gefunden 667:10=67.7
     position: fixed;
     top: 0; //das heißt es fängt in der top right corner an
@@ -61,13 +60,6 @@
     display:flex;
     align-items: center;
     justify-content: flex-start;
-    @include respond (desk) {
-      width:100&;
-      height:20%;
-      background-color: blue;
-      opacity:1;
-      z-index:4000;
-    }
   }
 
   &__list {
@@ -83,12 +75,11 @@
     margin: 1.2rem, 0; //Abstand Figma 24-28 px, also halt oben unten 1.2rem
   }
   &__link {
-    //ist eig ne h3, aber da gibts auch ne margin, kb umzuschreiben
+    //ist eig ne h3 bei mobile, aber da gibts auch ne margin, sonst noch umschreiben
     text-decoration: none;
     color: $color-white;
     font-weight: 900;
-    font-size: 3.2rem;
-    //display: inline-block; //das macht er im vid, brauch ich das hier?
+    font-size: 3.2rem;    //display: inline-block; //das macht er im vid, brauch ich das hier?
   }
 
   //FUNCTIONALITY
@@ -170,16 +161,17 @@
 }
 
 
-
 //////////DESKTOP MENU
 .topnav-desktop {
   display:none;
   width:100%;
-  @include respond (desk) {
+  @include respond (tablet) {
     display: inline;
     margin-right:0;
     padding-right:6%;
     padding-left:6%;
+    position:fixed;
+    top:2rem;
   }
   &__list {
     display:flex;
@@ -188,9 +180,10 @@
   }
   &__item {
     padding-left:10%;
+    list-style-type: none;
     >a {
       font-weight: 500;
-      font-size:18px
+      font-size:18px;
     }
   }
 }

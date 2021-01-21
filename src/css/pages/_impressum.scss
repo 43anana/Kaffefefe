@@ -1,0 +1,77 @@
+.header-imp {
+    width:100%; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:top;
+    display:flex;                  
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+    color:black;
+    @include respond (tablet) {
+        width:100%;
+        height:60vh;
+        background-position:center;
+    }
+    @include respond(desk) {
+        width:100%;
+        height:65vh;//11.97%;//65 vh ..wie oben..i don´t get it.. 681 px von 5688 => 12%
+        
+    }
+}
+
+
+
+
+.logo-btn-home{
+    width:35px;
+    height:35px;
+    margin-left: 6%; 
+    position: fixed;
+    top:2rem;
+}
+
+.logo-btn-img {        //das ist das label, also der button
+    width:100%;
+    height:auto;
+}
+
+
+
+  
+.topnav-desktop__item>a{
+        text-decoration: none;
+        color: $color-black;
+        font-weight: 500;
+        font-size:18px;
+}
+/*.tovpnav__link--black {   WIESO GEHT DAS EIGENTLICH NICHT? sondern nur über item>a bzw warum überschreibt es
+    text-decoration: none;
+    color: $color-black;
+    font-weight: 900;
+    font-size: 3.2rem;    //display: inline-block; //das macht er im vid, brauch ich das hier?
+  }*/
+
+.imp-outline {
+    width:86%;
+    margin:auto;
+}
+
+.imp-layout {       //paddings der divs
+    padding-bottom:10%;
+    
+    >h1 {
+        margin-bottom:2rem;
+        font-size: 5.6rem;  //das hab ich mir jetzt so überlegt weil die sonst genau glecih groß wären
+    }
+    h2 {
+        margin-bottom:3rem;
+    }
+    >h3 {
+        margin-top: 2rem;
+        margin-bottom:1rem;
+    }
+}
+.survey-list {
+    list-style-type: none;
+}

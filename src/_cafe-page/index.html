@@ -4,21 +4,179 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Subpage</title>
   <link rel="stylesheet" href="../css/main.scss" />
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
+  <title>Cafe-page</title>
 </head>
 
 <body>
-  <h1>nomnom</h1>
-  <main>
-    <div class="hero">HERO[s are overrated]</div>
-    <a href="/">Home</a>
-    <div class="giphy">
-      <iframe class="giphy__responsive" src="https://giphy.com/embed/3D1v8iexqiPbq" title="coffee"
-        alt="coffee-drinker-giphy"></iframe>
-      <!--funktionert zwar grad nicht aber irgendwie nicht thema grad:D-->
+
+  <!--HEADER-->
+  <header class="header-cafe">
+    <div class="topnav">
+      <div class="topnav__logobox">
+        <img class="topnav__logo" src="../img/Logo.svg" alt="logo">
+      </div>
+      <div class="topnav-mobile">
+        <input type="checkbox" class="topnav__checkbox" id="navi-toggle">
+        <label for="navi-toggle" class="topnav__button">
+          <span class="topnav__icon">&nbsp;
+            <svg class="topnav__icon--x" width="24" height="22" viewBox="0 0 24 22" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path d="M3.5 2L12.5 11M21.5 20L12.5 11M12.5 11L3.5 20M12.5 11L21.5 2" stroke="white" stroke-width="3" />
+            </svg>
+          </span>
+        </label>
+        <div class="topnav__background">&nbsp;</div>
+        <!--empty background nbsp-->
+        <nav class="topnav__nav">
+          <ul class="topnav__list">
+            <li class="topnav__item"><a href="index.html" class="topnav__link">Das Café</a></li>
+            <li class="topnav__item"><a href="../_herkunft/index.html" class="topnav__link">Herkunft</a></li>
+            <li class="topnav__item"><a href="../_shop/index.html" class="topnav__link">Shop</a></li>
+          </ul>
+        </nav>
+      </div>
+     
+    
+    <div class="topnav-desktop">
+      <ul class="topnav-desktop__list">
+        <li class="topnav-desktop__item"><a href="index.html" class="topnav__link">Das Café</a></li>
+        <li class="topnav-desktop__item"><a href="../_herkunft/index.html" class="topnav__link">Herkunft</a></li>
+        <li class="topnav-desktop__item"><a href="../_shop/index.html" class="topnav__link">Shop</a></li>
+      </ul>
     </div>
-  </main>
+  </div>
+  </header>
+
+<main>
+  <div class="cafe">
+    <section class="cafe__content cafe__content--location">
+      <div class="location-desktop">
+        <h2>Rösterei & Café</h2>
+        <p class="text-m--black" id="roest-text">Kaffee aus Kiel, direkt gehandelt
+          und geröstet in der eigenen Rösterei, serviert im
+          gemütlichen Café in der Innenstadt.</p>
+        <div class="address text-m--black">
+          <p>Komm uns besuchen!
+            <br>Fraunhoferstr. 13, Kiel
+          </p>
+          <p>Mo – Fr 8–18 Uhr
+            <br>Sa 11–18 Uhr
+          </p>
+        </div>
+      </div>
+      <div class="machine-img-box">
+        <img alt="machine-img" src="../img/FEND-Coffee-machine-2.png">
+      </div>
+    </section>
+    
+    <section class="gebaeck">
+      <h3>Frisches Gebäck von nebenan</h3>
+      <p class="text-m--black">
+        Als es die ersten Hügel des Kursivgebirges erklommen hatte, 
+        warf es einen letzten Blick zurück auf die Skyline seiner 
+        Heimatstadt Buchstabhausen, die Headline von Alphabetdorf. 
+        Wehmütig lief ihm eine rhetorische Frage über die Wange, 
+        dann setzte es seinen Weg fort. Unterwegs traf es eine Copy. 
+        Die Copy warnte das Blindtextchen, da, wo sie herkäme wäre sie
+        zigmal umgeschrieben worden und alles, was von ihrem Ursprung
+        noch übrig wäre, sei das Wort "und" und das Blindtextchen 
+        solle umkehren und wieder in sein eigenes, sicheres
+        Land zurückkehren.
+      </p>
+    </section>
+
+    <section class="gallery">
+      <div class="row">
+        <div class ="column">
+          <img alt="croissant" src="../img/FEND-danish.png">
+        </div>
+        <div class="column">
+          <img alt="coffee-shot" src="../img/FEND-coffee-machine.png">
+        </div>
+        <div class="column">
+          <img alt="coffee-art" src="../img/FEND-Coffee-latte-art.png">
+        </div>
+        <div class="column">
+          <img alt="coffee-sign" src="../img/FEND-Coffee-sign.png">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class ="column">
+          <img alt="coffee-art-2" src="../img/FEND-Coffee-latte-art-circle.png">
+        </div>
+        <div class="column">
+          <img alt="coffee-breakfast" src="../img/FEND-coffee-breakfast.png">
+        </div>
+        <div class="column">
+          <img alt="menu-board" src="../img/FEND-coffee-list.png">
+        </div>
+        <div class="column">
+          <img alt="coffee-latte-art" src="../img/FEND-Coffee-latte-art-3-quer.png">
+        </div>
+      </div>
+
+
+      <!--croissant
+      kaffee-art
+    kaffee-shot
+  kaffee am stisch
+eingießen
+tafel
+COFFEE
+header-bild-->
+    </section>
+
+      <!--KOMM VORBEI-->
+      <section class="visit">
+        <div class="visit__text">
+          <!--weiß grad nicht wo ichs hinsortieren soll..aber eig nich herkunft-->
+          <h2>Komm vorbei</h2>
+        </div>
+        <!-- <img id="img-map" src="img/MAP_KAFFEE_Bildschirmfoto 2020-12-14 um 09.59 1.png" alt="screenshot-google-maps">-->
+        <div class="visit__map">
+          <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            src="https://www.openstreetmap.org/export/embed.html?bbox=10.118724703788759%2C54.34034445733928%2C10.125805735588076%2C54.34332778443026&amp;layer=mapnik&amp;marker=54.3418361479485%2C10.122265219688416">
+          </iframe><br><small><a class="visit__map--bigger"
+              href="https://www.openstreetmap.org/?mlat=54.34184&amp;mlon=10.12227#map=18/54.34184/10.12227">
+              Größere Karte anzeigen</a></small>
+        </div>
+        <!--AKTUELL IST MEINE MAP NICHTIN DER GEWOLLTEN WIDTH. why?-->
+      </section>
+
+</main>
+
+
+<footer class="footer">
+  <section class="footer-text">
+    <div class="footer-title">
+            <img src="../img/Logo.svg" alt="logo">
+    <p class="rust">Rustica</p>
+    <p class="subhead">Café & Rösterei</p>
+    </div>
+
+    <div class="address text-m-imp">
+      <p>Komm uns besuchen!
+        <br>Fraunhoferstr. 13, Kiel
+      </p>
+      <p>Mo – Fr 8–18 Uhr
+        <br>Sa 11–18 Uhr
+      </p>
+    </div>
+    <div class="footer-links text-m--imp">
+      <p>Impressum
+        <br>Datenschutz
+      </p>
+      <p>Café
+        <br>Shop
+        <br>Herkunft
+      </p>
+    </div>
+  </section>
+</footer>
   <script src="../js/index.js"></script>
 </body>
 

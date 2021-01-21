@@ -23,11 +23,12 @@
         text-align: center;
         color:$color-white;
         >p{
-          margin-top:2rem;
+          margin-top:1rem;
         }
         >a {
+          display:inline-block;
           text-decoration: none;
-          margin-top:2rem;
+          margin-top:1rem;
         }
     }
     
@@ -62,20 +63,21 @@
   }
     
   &__icon-btn-box{
+    width:100%;
+    @include respond (desk) {
     width:60%;
     height:auto;
     margin:auto;
+    }
   }
 
   &__icons {
     display:flex;
     flex-direction:row;
-   // justify-content: space-between;
-    width:86%;
+    justify-content: space-between;
     margin-top:10%;
     margin-left:auto;
     margin-right:auto;
-    justify-content: center;
     @include respond (desk) {
       flex-direction: column;
       flex-wrap: nowrap;
@@ -111,15 +113,21 @@
  .icon-mittext{
    display:flex;
    flex-direction:column;
-   margin-bottom:30%;
+   margin-bottom:20%;   //KLARMACHEN 20% wovon!
    align-items: center;
+   justify-content: space-evenly;
    width:26%;
+   @include respond (phone-land) {
+      width:20%;
+   } 
   }
 
   .is-icon-box {
     width: 50%;
     height:auto;
-    margin:auto;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:1rem;   //ÜBERPRÜFEN: kann justify-cont: space evenly/between bei elementen ohne definierte höhe nicht funktionierne?
   }
   .is-icon {
       width: 100%;

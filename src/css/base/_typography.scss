@@ -15,6 +15,18 @@ body {    //man setzt keine height oder?
 
 //IST ES SINNVOLLER noch klassen zb .h2--white einzuführen oder 
 //dann an der jeweiligen stelle via >h2 { zu machen? auch re spezifität
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight:900;
+  font-style:normal;
+  font-size:6.4rem;
+ // line-height:2%;
+  @include respond (desk){
+    font-size:9.6rem;
+   // line-height: 2%//diese 1.1%; müssen von sonstwoher kommen
+  }
+}
+
 h2 {                                        
     font-family: "Roboto", sans-serif;
     font-weight:900;
@@ -23,7 +35,7 @@ h2 {
     line-height:3.4rem;
     @include respond (desk){
       font-size: 4.8rem;
-      line-height: 1.1%;
+      line-height: 2%//diese 1.1%; müssen von sonstwoher kommen
     }
   }
   
@@ -43,7 +55,7 @@ h2 {
     font-size:1.4rem;
     line-height:1.8rem;
     color:$color-black;
-    @include respond (phone-land desk) {
+    @include respond (phone-land) {
       font-size: 1.8rem;
       line-height: 2.4rem;
     }
@@ -54,6 +66,10 @@ h2 {
     font-size:1.4rem;
     line-height:1.8rem;
     color:$color-white;
+    @include respond (phone-land) {
+      font-size: 1.8rem;
+      line-height: 2.4rem;
+    }
   }
 
   
