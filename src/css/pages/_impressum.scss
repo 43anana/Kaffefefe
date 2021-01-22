@@ -20,30 +20,12 @@
     }
 }
 
-
-
-
-.logo-btn-home{
-    width:35px;
-    height:35px;
-    margin-left: 6%; 
-    position: fixed;
-    top:2rem;
-}
-
-.logo-btn-img {        //das ist das label, also der button
-    width:100%;
-    height:auto;
-}
-
-
-
   
-.topnav-desktop__item>a{
+.topnav-desktop-imp__item>a{
         text-decoration: none;
         color: $color-black;
         font-weight: 500;
-        font-size:18px;
+        font-size:1.8rem;
 }
 /*.tovpnav__link--black {   WIESO GEHT DAS EIGENTLICH NICHT? sondern nur über item>a bzw warum überschreibt es
     text-decoration: none;

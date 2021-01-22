@@ -43,7 +43,17 @@
 }
 
 .gallery {
-
+  display:flex;
+  flex-wrap:nowrap;
+  justify-content: space-between;
+  width:86%;
+  margin:auto;
+  .row {
+    width:48%;
+  }
+  .column{
+    margin-bottom:1rem;
+  }
 }
 
 .visit{

@@ -6,18 +6,6 @@
   display: flex;
   flex-direction: row;
   
-  &__logobox {
-    margin-left: 6%; //angepasst an button wobei button, alt von figma 6.4%;
-    position: fixed;
-    top:2rem;
-    width:35px;
-    height:auto;
-  }
-    &__logo {
-      color: white;
-      width:100%;
-      height:auto;   
-    }
 
   &__checkbox {
     display: none;
@@ -160,6 +148,20 @@
   }
 }
 
+///LOGO ALS HOME BUTTON NUTZEN
+.logo-btn-home{
+  width:35px;
+  height:35px;
+  position: fixed;
+  top:2rem;
+  left:6%;
+
+  .logo-btn-img {        //das ist das label, also der button
+    width:100%;
+    height:auto;
+  }
+}
+
 
 //////////DESKTOP MENU
 .topnav-desktop {
@@ -181,12 +183,25 @@
   &__item {
     padding-left:10%;
     list-style-type: none;
-    >a {
-      font-weight: 500;
-      font-size:18px;
-    }
   }
-}
+    &__link {
+      font-weight: 500;
+      font-size:1.8rem;
+      color:$color-white;
+      text-decoration: none;
+      /**&::after {         WIE SETZE ICH DIE LINIEN UNTER HERKUNFT UND SHOP UM? BZW MUSS ICH EINFACH LINIEN MACHEN UND DIE POSITIONIEREN
+          position: fixed;
+          top: 0.6rem;
+          left: 0;
+          width: 1.8rem;
+          height: 3px;
+          color:blue;
+          background-color: green;
+        }*/
+      }
+  }
+  
+
 
 //ALTERNATIVE OHNE SVG VON SCHMETTI, unfertig
 /*

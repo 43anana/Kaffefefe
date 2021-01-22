@@ -83,16 +83,16 @@ h2 {
     font-size:2.4rem;
     line-height: 2.8rem;
   }
+
   .address {
     display:flex;
-    flex-direction: row;
-    margin-top:20px;
+    margin-top:2rem;
     :first-child{
-        margin-right:17px;
-        width:156px;
-        @include respond (desk) {
-          margin-right: 1.6rem;
-          width:58.7%; //298px von 507px breite des cafe__desktop 
-        }
+        margin-right:10%;
     }
   }
+  /*
+  display:flex;
+  margin-top:5.5rem;
+  margin-bottom:3.4rem;
+  */

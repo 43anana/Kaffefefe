@@ -18,9 +18,9 @@
   <!--HEADER-->
   <header class="header">
     <div class="topnav">
-      <div class="topnav__logobox">
-        <img class="topnav__logo" src="img/Logo.svg" alt="logo">
-      </div>
+      <a href="./index.html" class="logo-btn-home">&nbsp;
+        <img src="img/Logo.svg" class="logo-btn-img" logo>
+      </a>
       <div class="topnav-mobile">
         <input type="checkbox" class="topnav__checkbox" id="navi-toggle">
         <label for="navi-toggle" class="topnav__button">
@@ -41,24 +41,25 @@
           </ul>
         </nav>
       </div>
-     
-    
-    <div class="topnav-desktop">
-      <ul class="topnav-desktop__list">
-        <li class="topnav-desktop__item"><a href="_cafe-page/index.html" class="topnav__link">Das Café</a></li>
-        <li class="topnav-desktop__item"><a href="_herkunft/index.html" class="topnav__link">Herkunft</a></li>
-        <li class="topnav-desktop__item"><a href="_shop/index.html" class="topnav__link">Shop</a></li>
-      </ul>
-    </div>
-  </div>
-      <div class="header__text">
-        <h1 class="title_primary">
-          <span class="title_primary--main">Rustica</span>
-          <span class="title_primary--sub">Bio und Fair seit 1991</span>
-        </h1>
+
+
+      <div class="topnav-desktop">
+        <ul class="topnav-desktop__list">
+          <li class="topnav-desktop__item"><a href="_cafe-page/index.html" class="topnav-desktop__link">Das Café</a>
+          </li>
+          <li class="topnav-desktop__item"><a href="_herkunft/index.html" class="topnav-desktop__link">Herkunft</a></li>
+          <li class="topnav-desktop__item"><a href="_shop/index.html" class="topnav-desktop__link">Shop</a></li>
+        </ul>
       </div>
-      <a class="btn btn-shop text-m--white" role="button" href="_shop/index.html">Zum Shop</a>
-      
+    </div>
+    <div class="header__text">
+      <h1 class="title_primary">
+        <span class="title_primary--main">Rustica</span>
+        <span class="title_primary--sub">Bio und Fair seit 1991</span>
+      </h1>
+    </div>
+    <a class="btn btn-shop text-m--white" role="button" href="_shop/index.html">Zum Shop</a>
+
   </header>
 
   <main>
@@ -211,94 +212,95 @@
       </div>
     </section>
 
-      <!--DAS STECKT DRIN-->
-      <section class="dassteckt">
-        <h2>Das steckt drin</h2>
-        <div class="dassteckt__text">
-          <div class="img-herkunft-blend">
-            <img srcset="img/FEND_Coffee_Costa-Rica-1x.png 1x, img/FEND_Coffee_Costa-Rica-2x.png 2x" alt="blend-img">
-          </div>
+    <!--DAS STECKT DRIN-->
+    <section class="dassteckt">
+      <h2>Das steckt drin</h2>
+      <div class="dassteckt__text">
+        <div class="img-herkunft-blend">
+          <img srcset="img/FEND_Coffee_Costa-Rica-1x.png 1x, img/FEND_Coffee_Costa-Rica-2x.png 2x" alt="blend-img">
+        </div>
         <div class="dassteckt__icon-btn-box">
           <!--ICON + TEXT INHALT KAFFEE-->
-            <div class="dassteckt__icons">
-              <div class="icon-mittext">
-                <div class="is-icon-box">
-                  <img class="is-icon" src="img/Icon Kaffee Tasse.svg" alt="coffee-cup-img">
-                </div>
-                <p class="text-m">Bester <br>Geschmack</p>
+          <div class="dassteckt__icons">
+            <div class="icon-mittext">
+              <div class="is-icon-box">
+                <img class="is-icon" src="img/Icon Kaffee Tasse.svg" alt="coffee-cup-img">
               </div>
+              <p class="text-m">Bester <br>Geschmack</p>
+            </div>
 
-              <div class="icon-mittext">
-                <div class="is-icon-box">
+            <div class="icon-mittext">
+              <div class="is-icon-box">
                 <img class="is-icon" src="img/Icon Kaffee Schaufel.svg" alt="coffee-shovel-img">
               </div>
-                <p class="text-m">Fair <br>gehandelt</p>
-              </div>
-
-              <div class="icon-mittext">
-                <div class="is-icon-box">
-                <img class="is-icon" src="img/Icon-Kaffee Pflanze.svg" alt="coffee-plant-img">
-                </div>
-                <p class="text-m">Bio  <br> Qualität
-                </p>
-                <!--unschön mit br oder!?-->
-              </div>
+              <p class="text-m">Fair <br>gehandelt</p>
             </div>
-            <a class="btn btn-shop2" role="button" href="_shop/index.html">Zum Shop</a>
-            <!--wegen positionierung aktuell 2 btn-shop..auflösen!-->
+
+            <div class="icon-mittext">
+              <div class="is-icon-box">
+                <img class="is-icon" src="img/Icon-Kaffee Pflanze.svg" alt="coffee-plant-img">
+              </div>
+              <p class="text-m">Bio <br> Qualität
+              </p>
+              <!--unschön mit br oder!?-->
+            </div>
           </div>
+          <a class="btn btn-shop2" role="button" href="_shop/index.html">Zum Shop</a>
+          <!--wegen positionierung aktuell 2 btn-shop..auflösen!-->
         </div>
-      </section>
-
-
-      <!--KOMM VORBEI-->
-      <section class="visit">
-        <div class="visit__text">
-          <!--weiß grad nicht wo ichs hinsortieren soll..aber eig nich herkunft-->
-          <h2>Komm vorbei</h2>
-        </div>
-        <!-- <img id="img-map" src="img/MAP_KAFFEE_Bildschirmfoto 2020-12-14 um 09.59 1.png" alt="screenshot-google-maps">-->
-        <div class="visit__map">
-          <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
-            src="https://www.openstreetmap.org/export/embed.html?bbox=10.118724703788759%2C54.34034445733928%2C10.125805735588076%2C54.34332778443026&amp;layer=mapnik&amp;marker=54.3418361479485%2C10.122265219688416">
-          </iframe><br><small><a class="visit__map--bigger"
-              href="https://www.openstreetmap.org/?mlat=54.34184&amp;mlon=10.12227#map=18/54.34184/10.12227">
-              Größere Karte anzeigen</a></small>
-        </div>
-        <!--AKTUELL IST MEINE MAP NICHTIN DER GEWOLLTEN WIDTH. why?-->
-      </section>
-    
-  
-
-
-  <footer class="footer">
-    <section class="footer-text">
-      <div class="footer-title">
-          <img src="img/Logo.svg" alt="logo">
-      <p class="rust">Rustica</p>
-      <p class="subhead">Café & Rösterei</p>
-      </div>
-
-      <div class="address text-m-imp">
-        <p>Komm uns besuchen!
-          <br>Fraunhoferstr. 13, Kiel
-        </p>
-        <p>Mo – Fr 8–18 Uhr
-          <br>Sa 11–18 Uhr
-        </p>
-      </div>
-      <div class="footer-links text-m--imp">
-        <p> <a href="/impressum.html">Impressum</a>
-          <br>Datenschutz
-        </p>
-        <p>Café
-          <br>Shop
-          <br>Herkunft
-        </p>
       </div>
     </section>
-  </footer>
-</main>
+
+
+    <!--KOMM VORBEI-->
+    <section class="visit">
+      <div class="visit__text">
+        <!--weiß grad nicht wo ichs hinsortieren soll..aber eig nich herkunft-->
+        <h2>Komm vorbei</h2>
+      </div>
+      <!-- <img id="img-map" src="img/MAP_KAFFEE_Bildschirmfoto 2020-12-14 um 09.59 1.png" alt="screenshot-google-maps">-->
+      <div class="visit__map">
+        <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+          src="https://www.openstreetmap.org/export/embed.html?bbox=10.118724703788759%2C54.34034445733928%2C10.125805735588076%2C54.34332778443026&amp;layer=mapnik&amp;marker=54.3418361479485%2C10.122265219688416">
+        </iframe><br><small><a class="visit__map--bigger"
+            href="https://www.openstreetmap.org/?mlat=54.34184&amp;mlon=10.12227#map=18/54.34184/10.12227">
+            Größere Karte anzeigen</a></small>
+      </div>
+      <!--AKTUELL IST MEINE MAP NICHTIN DER GEWOLLTEN WIDTH. why?-->
+    </section>
+
+
+
+
+    <footer class="footer">
+      <section class="footer-text">
+        <div class="footer-title">
+          <img src="img/Logo.svg" alt="logo">
+          <p class="rust">Rustica</p>
+          <p class="subhead">Café & Rösterei</p>
+        </div>
+
+        <div class="address--imp text-m--imp">
+          <p>Komm uns besuchen!
+            <br>Fraunhoferstr. 13, Kiel
+          </p>
+          <p>Mo – Fr 8–18 Uhr
+            <br>Sa 11–18 Uhr
+          </p>
+        </div>
+        <div class="footer-links text-m--imp">
+          <span class="footer-links__nav">
+            <a href="_cafe-page/index.html" class="footer-links__style">Das Café</a>
+            <a href="_shop/index.html" class="footer-links__style">Shop</a>
+            <a href="_herkunft/index.html" class="footer-links__style">Herkunft</a>
+          </span>
+          <span><a href="/impressum.html" class="footer-links__style">Impressum</a>
+            <br>Datenschutz
+          </span>
+        </div>
+      </section>
+    </footer>
+  </main>
   <script src="js/index.js"></script>
 
 </body>
