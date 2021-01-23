@@ -6,13 +6,17 @@
   border-radius:0.5rem;
   text-decoration:none;
   line-height: 1;
+  @include respond (desk) {
+    font-size:1.4rem;
+    line-height: 1.8rem;
+  }
 }
 
 //noch umbenennen in btn-dark
 .btn-shop {
   background:#1A1A1A;    
-  width:16.3rem;
-  height:4rem;
+  //width:16.3rem;
+ // height:4rem;
   color:#fff;
   /*display:inline-block;
   position:absolute;            //alles weg weil jetzt FLEXBOX im header
@@ -32,8 +36,8 @@
 
 .btn-shop2 {
   background:#1A1A1A;
-  width:16.3rem;
-  height:4rem;
+ // width:16.3rem;
+ // height:4rem;
   color:#fff;
   margin-top:4rem;
   padding:1.5rem 5rem 1.5rem 5rem;
@@ -57,8 +61,8 @@
     margin-left:auto;
     margin-right:auto;   //die margins zentrieren!//
     text-align:center;
-    width:182px;
-    height:48px;
+    //width:182px;
+    //height:48px;
     padding:15px 50px 15px 50px;
   }
     //position:absolute;  top:398px;  left:106px;//

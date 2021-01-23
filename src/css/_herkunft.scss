@@ -23,12 +23,15 @@
         text-align: center;
         color:$color-white;
         >p{
-          margin-top:1rem;
+          margin-top:2rem;
         }
         >a {
           display:inline-block;
           text-decoration: none;
-          margin-top:1rem;
+          margin-top:2rem;
+          &:hover {
+            font-weight: 900;
+          }
         }
     }
     
@@ -39,6 +42,8 @@
   max-width:$max-width;
   margin-top:10%;
   margin-bottom:10%;
+  margin-right:auto;
+  margin-left:auto;
   // height:auto;
   text-align: center;
   >h2 {
@@ -46,11 +51,10 @@
     margin-bottom:10%;
     }
 
-  &__text{
+  &__flex{
     width:86%; 
     text-align:center;
     margin:auto;
-
 
     @include respond (desk) {    
       display:flex;
@@ -65,7 +69,7 @@
   &__icon-btn-box{
     width:100%;
     @include respond (desk) {
-    width:60%;
+    width:30%;              //die "restliche" Breite neben dem Bild
     height:auto;
     margin:auto;
     }
@@ -99,7 +103,7 @@
       margin-right:auto;
     }
     @include respond (desk) {
-      width:60%;  //figma mit pixeln von überdif war ich bei 70% aber fand das zu groß
+      width:60%;  //ca breite des bildes vs. icons + text
       margin-right:0%;
       margin-left:0;
       >img {
