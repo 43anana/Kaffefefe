@@ -193,41 +193,33 @@
       font-size:1.8rem;
       color:$color-white;
       text-decoration: none;
-      border-bottom: 1px solid $color-white;
-      border-width:0;
-      transition:border-width 0.8s;
-    
-      /**&::after {         WIE SETZE ICH DIE LINIEN UNTER HERKUNFT UND SHOP UM? BZW MUSS ICH EINFACH LINIEN MACHEN UND DIE POSITIONIEREN
-          position: fixed;
-          top: 0.6rem;
-          left: 0;
-          width: 1.8rem;
-          height: 3px;
-          color:blue;
-          background-color: green;
-        }*/
+      position:relative;
+      &::after {        //PRINZIP: erstelle after-Klasse mit der border bottom, positioniere sie, gib ihr transition, gib hover nur auf after! 
+        content:"";
+        border-bottom:1px solid $color-white;
+        width:0;
+        height:100%;
+        transition:width 0.8s;
+        display:inline-block;
+        position: absolute;
+        left: 0;
+        top:0.3rem;
+      }
+        &:hover::after {      //  FRAGE: warum funzt es nicht, wenn ich den hover einfach bei ::after reinschreibe?
+          width:100%;
+        }
+      
         &:active {
           border-bottom:1px solid $color-white;
         }
 
-        &:hover {
-          border-width:100%;
-        }
     }
   }
-  /*
-        &::after {
-      font-weight: 500;
-      font-size:1.8rem;
-      color:$color-white;
-      text-decoration: none;
-      font-weight: 500;
-      font-size:1.8rem;
-      color:$color-white;
-      text-decoration: none;
-      border-bottom: 1px solid $color-white;
-      border-width:100%;
-      }*/
+  
+
+           /*hatte ich erst bei der normalen nicht after! border-bottom: 1px solid $color-white;
+      border-width:0;
+      transition:border-width 0.8s;*/
 
 
 //ALTERNATIVE OHNE SVG VON SCHMETTI, unfertig
