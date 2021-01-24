@@ -82,15 +82,20 @@
   .icon-line {
     display:flex;
     flex-direction:row;
+    align-items: flex-end;
+  }
+
+  .shop__svg {
+    width:100%;
+    height:auto; 
   }
   
   .icon-box   {
-    width:10%;
-    height:10%;
-    margin-right:8px;
-   // position:relative;// aber dann ist die icon box unnütz oder ?
+    width:5%;
+    height:auto;
+    margin-right:2%; //ca, ..8px in mobile auf figma?
     }
-  
+  /*
   .icon {
     color:#fff;  
     //position:absolute;//
@@ -106,7 +111,7 @@
       width:12px;
       height:13px;
     }
-  }
+  }*/
   
   .price {
     color: #737373;

@@ -174,21 +174,29 @@
     padding-left:6%;
     position:fixed;
     top:2rem;
-  }
-  &__list {
-    display:flex;
-    justify-content: flex-end;
-    align-items:center;
-  }
-  &__item {
-    padding-left:10%;
-    list-style-type: none;
-  }
+    }
+    &__list {
+      display:flex;
+      justify-content: flex-end;
+      align-items:center;
+    }
+    &__item {
+      padding-left:10%;
+      list-style-type: none;
+    }
     &__link {
       font-weight: 500;
       font-size:1.8rem;
       color:$color-white;
       text-decoration: none;
+      font-weight: 500;
+      font-size:1.8rem;
+      color:$color-white;
+      text-decoration: none;
+      border-bottom: 1px solid $color-white;
+      border-width:0;
+      transition:border-width 0.8s;
+    
       /**&::after {         WIE SETZE ICH DIE LINIEN UNTER HERKUNFT UND SHOP UM? BZW MUSS ICH EINFACH LINIEN MACHEN UND DIE POSITIONIEREN
           position: fixed;
           top: 0.6rem;
@@ -198,14 +206,33 @@
           color:blue;
           background-color: green;
         }*/
-      }
+        &:active {
+          border-bottom:1px solid $color-white;
+        }
+
+        &:hover {
+          border-width:100%;
+        }
+    }
   }
-  
+  /*
+        &::after {
+      font-weight: 500;
+      font-size:1.8rem;
+      color:$color-white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size:1.8rem;
+      color:$color-white;
+      text-decoration: none;
+      border-bottom: 1px solid $color-white;
+      border-width:100%;
+      }*/
 
 
 //ALTERNATIVE OHNE SVG VON SCHMETTI, unfertig
 /*
-&__checkbox:checked + &__button &__icon &--xefore {       
+&__checkbox:checked + &__button &__icon &--before {       
     transform:rotate(135deg);
     top:0;
 }

@@ -68,12 +68,13 @@
 
         &--info{
             padding-bottom:10%;//was würde man eher nehmen, margin oder padding?..der hg ist ja eh weiß
+            width:86%;
 
             @include respond (desk) {
                 display:flex;
                 flex-direction: row-reverse;
                 align-items: flex-start;
-                width:$max-width;
+                max-width:$max-width;
             }
             
 
@@ -82,8 +83,8 @@
                     width:70%;
                 }
                 @include respond (desk) {
-                width:50%;
-                margin-left:10%;     //Abstand zw. Bild und Text
+                    width:50%;
+                    margin-left:10%;     //Abstand zw. Bild und Text
                
             }
 
@@ -99,9 +100,9 @@
                     display:block;//s.o. visibility:visible; aber jetzt ist es block obwohls im flex is??
                     text-decoration: none;
                     margin-top:0.9rem;
-                    &:hover {
-                        font-weight:900;
-                    }
+                        &:hover {
+                            font-weight:900;
+                        }
                     }
                 }
             }
