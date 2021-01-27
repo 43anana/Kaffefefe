@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "parcel src/index.html --host 0.0.0.0",
+    "start": "parcel --host 0.0.0.0 src/index.html",
     "build": "parcel build src/index.html",
     "lint": "eslint src/js"
   },

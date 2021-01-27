@@ -35,7 +35,7 @@ h2 {
     line-height:3.4rem;
     @include respond (desk){
       font-size: 4.8rem;
-      line-height: 2%//diese 1.1%; müssen von sonstwoher kommen
+      //line-height: 2%//diese 1.1%; müssen von sonstwoher kommen
     }
   }
   
@@ -45,7 +45,7 @@ h2 {
     line-height:3.7rem; /*wieso dachte ich im video gehrööt zu haben dass man da keine px angibt?..wie rechne ih das um?*/ 
     @include respond (desk) {
       font-size: 4.2rem;
-     // line-height: 1.1%;    warum ist das gesetzt, das reicht nicht für die schriftgröße!?
+    // line-height: 1.1%;    warum ist das gesetzt, das reicht nicht für die schriftgröße!?
     }
   }
   

@@ -154,11 +154,14 @@
   height:35px;
   position: fixed;
   top:2rem;
-  left:6%;
+  left:7%;
 
   .logo-btn-img {        //das ist das label, also der button
     width:100%;
     height:auto;
+    position:absolute;
+    top:0;
+    left:0;
   }
 }
 
@@ -170,7 +173,7 @@
   @include respond (tablet) {
     display: inline;
     margin-right:0;
-    padding-right:6%;
+    padding-right:7%;
     padding-left:6%;
     position:fixed;
     top:2rem;

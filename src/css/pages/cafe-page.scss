@@ -14,7 +14,7 @@
     justify-content: center;
     @include respond (tablet) {
         width:100%;
-        height:60vh;
+        height:60vh; 
         background-position:center;
     }
     @include respond(desk) {
@@ -31,6 +31,10 @@
     height:auto;
     margin-left:30%;
     margin-top:10%;
+    @include respond (desk) {
+      width:50%;
+      margin:auto;
+    }
 }
 
 .gebaeck {
@@ -38,7 +42,15 @@
     margin:10% auto;
     >h3 {
         margin-right:20%;
-        margin-bottom:2rem;
+        margin-bottom:3rem;
+    }
+    @include respond (desk) {
+      width:50%;
+      margin:auto;
+      padding-bottom:10%; //meistens wenn das padding dann genau ist was sonst die margin ist mache ich das nur um margin:auto schreiben zu können. ich sollte das trotzdem nochmal googlen;-)
+        >h3 {
+          line-height: 4.9rem;    //wir kommen zurück zur line-height frage..die 1.1%..was sollen die?
+        }
     }
 }
 
@@ -48,50 +60,66 @@
   justify-content: space-between;
   width:86%;
   margin:auto;
-  .row {
+  &__row {
     width:48%;
   }
-  .column{
+  &__column{
     margin-bottom:1rem;
+  }
+  @include respond (desk) {
+    margin:0;
   }
 }
 
-.visit{
-    padding-top:10%;    //mehr oder weniger habe ich das jetzt bei vielen der 
-    width:100%;
-    background-color: $color-white;
-      
-    &__text {  
-    width:86%;
-    margin:auto;
-      >h2 {
-        color:$color-black;
-        margin-bottom:5rem;
-      }
-    }
+.gallery-test {
+  width:86%;
+  margin:auto;
+  display:flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  >img {
+    width:48%;
+    height:auto;
+  }
+ /* @include respond (tablet) {
+    >img {
+      width:25%;
     
-    &__map {
-      max-width:100%;
-      height:75%;   //ungefähr von Figma abgeschätzt REAGIERT NICHT, warum?
-      >iframe{
-        width:100%;
-        height:75%;
-      } 
-      @include respond (desk) {     // IFRAME FORMAT HÄÄÄÄÄÄÄÄÄÄÄÄ + nav + nav farbe + andere medias + focus
-        margin:auto;
-        width:60%;
-        height:100%;
-      }
-      &--bigger {      
-        display:block;           //bzw. meine neue frage ist dann wieso erbt er das flexen nicht? erben die nie flex?
-        color:$color-anthra;
-        text-align: center;
-        margin-bottom:2%;
-        text-transform: uppercase;
-        text-decoration: none;
-      }
+    &:nth-child(1) {order:1;}
+    &:nth-child(2) {order:2;}
+    &:nth-child(3) {order:3;}
+    &:nth-child(4) {order:8;}
+    &:nth-child(5) {order:7;}
+    &:nth-child(6) {order:4;}
+    &:nth-child(7) {order:5;}
+    &:nth-child(8) {order:6;}
+    }
+  }*/
+
+  @include respond (desk) {
+    display:grid;
+    grid-template-columns: repeat(4, 1fr); //statt 25% 25% 25% 25%;   sprache: 4 tracks
+    grid-template-rows: repeat(4, 20vw);    //falls alle gleich groß sind. falls 1 anders 2 gleich auch mgl: repeat (2, 150px) 200px;
+    grid-gap: 2rem;  //kann auch grid-row-gap und grid-column-cap nehmen, aber wenn beide gleich sind ..
+    //fyi: 1 fr = fraction of available space
+    //vgl %:  würde zb 50% genau die hälfte des containers nehmen, ua von den gaps, die anderen fr müssten sich den restlichen space teilen
+    //ggf. will ich für width bei den rows auch lieber 1fr nehmen!
+
+
+    >img {
+      width: 100%;
+      height:auto;
+    &:nth-child(1) {order:1;}
+    &:nth-child(2) {order:3;}
+    &:nth-child(3) {order:7;}
+    &:nth-child(4) {order:5;}
+    &:nth-child(5) {order:2;}
+    &:nth-child(6) {order:8;}
+    &:nth-child(7) {order:4;}
+    &:nth-child(8) {order:6;}
     }
   }
+}
 
 /*
     @include respond (phone-land) {
