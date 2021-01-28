@@ -63,7 +63,7 @@
       </div>
 
       <section class="imp-layout">
-        <h1>Privacy Policy</h1>
+        <h1 id="privacypolicy">Privacy Policy</h1>
         <div class="imp-layout">
           <h3>Scope</h3>
           <p class="text-m--black">The privacy policy describes exclusively
@@ -83,33 +83,31 @@
             <h3>Survey</h3>
             <p class="text-m--black">
               When you visit opencampus.sh, the web server stores the following data:
-              <span class="text-m--black">
-                <ul>
-                  <li class="survey-list">- IP address</li>
-                  <li class="survey-list">- Browser type and version</li>
-                  <li class="survey-list">- The operating system used</li>
-                  <li class="survey-list">- Date of access</li>
-                </ul>
-              </span>
-              The IP address, browser name and access date are not personal data.
-              A creation of personal user profiles is therefore not possible.
-              Opencampus.sh uses the data exclusively for statistical purposes.
-              They remain on the web server in anonymized or pseudonymized form
-              until they are deleted. It is not passed on to third parties.
-              <br>In order to be able to use our service to the full extent, a cookie
-              is installed on your computer. You will find information about
-              the cookie under Cookies.
-              <br>If you decide to register with stujo.net, the following personal
-              data will be required from you:
-              <span>
-                <ul>
-                  <li class="survey-list">- First name</li>
-                  <li class="survey-list">- Last name</li>
-                  <li class="survey-list">- E-mail address</li>
-                </ul>
-              </span>
-              After a successful registration at Opencampus.sh you have the possibility to
-              voluntarily provide further personal data.
+            <ul>
+              <li class="survey-list">- IP address</li>
+              <li class="survey-list">- Browser type and version</li>
+              <li class="survey-list">- The operating system used</li>
+              <li class="survey-list">- Date of access</li>
+            </ul>
+            The IP address, browser name and access date are not personal data.
+            A creation of personal user profiles is therefore not possible.
+            Opencampus.sh uses the data exclusively for statistical purposes.
+            They remain on the web server in anonymized or pseudonymized form
+            until they are deleted. It is not passed on to third parties.
+            <br>In order to be able to use our service to the full extent, a cookie
+            is installed on your computer. You will find information about
+            the cookie under Cookies.
+            <br>If you decide to register with stujo.net, the following personal
+            data will be required from you:
+            <span class="text-m--black">
+              <ul>
+                <li class="survey-list">- First name</li>
+                <li class="survey-list">- Last name</li>
+                <li class="survey-list">- E-mail address</li>
+              </ul>
+            </span>
+            After a successful registration at Opencampus.sh you have the possibility to
+            voluntarily provide further personal data.
             </p>
           </div>
 
@@ -221,7 +219,7 @@
         <p class="subhead">Café & Rösterei</p>
       </div>
 
-      <div class="address text-m-imp">
+      <div class="address--imp text-m--imp">
         <p>Komm uns besuchen!
           <br>Fraunhoferstr. 13, Kiel
         </p>
@@ -230,13 +228,15 @@
         </p>
       </div>
       <div class="footer-links text-m--imp">
-        <p>Impressum
-          <br>Datenschutz
-        </p>
-        <p>Café
-          <br>Shop
-          <br>Herkunft
-        </p>
+        <span class="footer-links__nav">
+          <a href="_cafe-page/index.html" class="footer-links__style">Das Café</a>
+          <a href="_shop/index.html" class="footer-links__style">Shop</a>
+          <a href="_herkunft/index.html" class="footer-links__style">Herkunft</a>
+        </span>
+        <span><a href="/impressum.html" class="footer-links__style">Impressum</a>
+          <br><a href="impressum.html/#privacypolicy" class="footer-links__style"
+            alt="link-to-privacy-policy">Datenschutz</a>
+          <a href="contact.html" class="footer-links__style" alt="contact-form">Kontaktformular</a> </span>
       </div>
     </section>
   </footer>
