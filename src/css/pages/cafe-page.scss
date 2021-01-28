@@ -71,7 +71,7 @@
   }
 }
 
-.gallery-test {
+.gallery {
   width:86%;
   margin:auto;
   display:flex;
@@ -99,24 +99,76 @@
   @include respond (desk) {
     display:grid;
     grid-template-columns: repeat(4, 1fr); //statt 25% 25% 25% 25%;   sprache: 4 tracks
-    grid-template-rows: repeat(4, 20vw);    //falls alle gleich groß sind. falls 1 anders 2 gleich auch mgl: repeat (2, 150px) 200px;
-    grid-gap: 2rem;  //kann auch grid-row-gap und grid-column-cap nehmen, aber wenn beide gleich sind ..
+    grid-template-rows: repeat(4, 15vw);    //falls alle gleich groß sind. falls 1 anders 2 gleich auch mgl: repeat (2, 150px) 200px;
+    
+    grid-column-gap:2rem;  //gibt für beide grid-gap: 2rem; aber ich brauche individuelle rows
     //fyi: 1 fr = fraction of available space
     //vgl %:  würde zb 50% genau die hälfte des containers nehmen, ua von den gaps, die anderen fr müssten sich den restlichen space teilen
-    //ggf. will ich für width bei den rows auch lieber 1fr nehmen!
+    //ggf. will ich für width bei den rows auch  lieber 1fr nehmen!
 
+    //welchen teiler haben 152,  173 und 308 gemein?  
 
-    >img {
+    &__item {
+     /* &:nth-child(1) {order:1;}
+      &:nth-child(2) {order:3;}
+      &:nth-child(3) {order:7;}
+      &:nth-child(4) {order:5;}
+      &:nth-child(5) {order:2;}
+      &:nth-child(6) {order:8;}
+      &:nth-child(7) {order:4;}
+      &:nth-child(8) {order:6;}*/
+
+      //ALTERNATIVIDEE: set template row to 5px und mach tausend reihen :D aber auch semi optimal
+
+      &--1 {
+        grid-row:1 /2;
+        grid-column:1/2;
+      }
+
+      &--4 {
+        grid-row:2 / span 2;
+        grid-column: 1 / 2;
+        //margin-top:11px;  //unschön, aber entspricht : diff von 173 und 154 = 9, d.h. 11 px 
+      }
+
+      &--5 {
+        grid-row:1 / span 2;
+        grid-column: 2 / 3;
+
+      }
+
+      &--8 {
+        grid-row: 3 / 4;
+        grid-column: 2 / 3;
+      }
+
+      &--2 {
+        grid-row: 1 / 2;
+        grid-column: 3 / 4;
+      }
+
+      &--3 {
+        grid-row:2 / span 2;
+        grid-column:3 / 4;
+      }
+
+      &--7 {
+        grid-row: 1 / span 2;
+        grid-column: 4 / 5;
+      }
+
+      &--6 {
+        grid-row:3/4;
+        grid-column:4/5;
+      }
+    }
+    &__item {           // BTW SCHREIBWEISE ANDERS: &>* {  -->bezieht sich auf alle child-elements,cool
       width: 100%;
-      height:auto;
-    &:nth-child(1) {order:1;}
-    &:nth-child(2) {order:3;}
-    &:nth-child(3) {order:7;}
-    &:nth-child(4) {order:5;}
-    &:nth-child(5) {order:2;}
-    &:nth-child(6) {order:8;}
-    &:nth-child(7) {order:4;}
-    &:nth-child(8) {order:6;}
+      height:100%;      //er sagt man muss ne height setzen..also schmetti.. geht auch auto?
+      object-fit:cover;
+      display:block;      //er sagt sonst haben wir da immer so weiße streifen drunter weil quasi wie wenn text..checke ich aber nicht 
+
+
     }
   }
 }

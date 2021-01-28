@@ -1,5 +1,29 @@
 //BUTTONS//
 
+///LOGO ALS HOME BUTTON NUTZEN
+.logo-btn-home{
+  width:35px;
+  height:35px;
+
+  &--header {
+    position:fixed;
+    top:2rem;
+    left:7%;
+    z-index:5000;
+  }
+
+  &--footer {
+    display:inline-block;
+  }
+
+  .logo-btn-img {        
+    width:100%;
+    height:auto;
+  }
+}
+
+
+//GENERAL
 .btn:link,
 .btn:visited {
   font-size:1.2rem;
@@ -11,6 +35,8 @@
     line-height: 1.8rem;
   }
 }
+
+//zum shop
 
 //noch umbenennen in btn-dark
 .btn-shop {

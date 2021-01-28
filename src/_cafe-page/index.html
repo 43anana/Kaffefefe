@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="../css/main.scss" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Roboto&display=swap" rel="stylesheet">
-  <title>Cafe-page</title>
+  <title>Café-subpage</title>
 </head>
 
 <body>
@@ -15,8 +15,8 @@
   <!--HEADER-->
   <header class="header-cafe">
     <div class="topnav">
-      <a href="../index.html" alt="link-to-home-page-via-logo">
-        <img src="../img/Logo.svg" class="logo-btn-img" logo>
+      <a href="../index.html" class="logo-btn-home logo-btn-home--header" alt="link-to-home-page-via-logo">
+        <img src="../img/Logo.svg" class="logo-btn-img" alt="logo">
       </a>
       <div class="topnav-mobile">
         <input type="checkbox" class="topnav__checkbox" id="navi-toggle">
@@ -122,15 +122,31 @@
       </section>-->
 
 
-      <section class="gallery-test">
-        <img alt="croissant" src="../img/FEND-danish.png">
-        <img alt="coffee-shot" src="../img/FEND-coffee-machine.png">
-        <img alt="coffee-art" src="../img/FEND-Coffee-latte-art.png">
-        <img alt="coffee-sign" src="../img/FEND-Coffee-sign.png">
-        <img alt="coffee-art-2" src="../img/FEND-Coffee-latte-art-circle.png">
-        <img alt="coffee-breakfast" src="../img/FEND-coffee-breakfast.png">
-        <img alt="menu-board" src="../img/FEND-coffee-list.png">
-        <img alt="coffee-latte-art" src="../img/FEND-Coffee-latte-art-3-quer.png">
+      <section class="gallery">
+        <figure class="gallery__item gallery__item--1">
+          <img class="gallery__img" alt="croissant" src="../img/FEND-danish.png">
+        </figure>
+        <figure class="gallery__item gallery__item--2">
+          <img class="gallery__img" alt="coffee-shot" src="../img/FEND-coffee-machine.png">
+        </figure>
+        <figure class="gallery__item gallery_item--3">
+          <img class="gallery__img" alt="coffee-art" src="../img/FEND-Coffee-latte-art.png">
+        </figure>
+        <figure class="gallery__item gallery__item--4">
+          <img class="gallery__img" alt="coffee-sign" src="../img/FEND-Coffee-sign.png">
+        </figure>
+        <figure class="gallery__item gallery__item--5">
+          <img class="gallery__img" alt="coffee-art-2" src="../img/FEND-Coffee-latte-art-circle.png">
+        </figure>
+        <figure class="gallery__item gallery__item--6">
+          <img class="gallery__img" alt="coffee-breakfast" src="../img/FEND-coffee-breakfast.png">
+        </figure>
+        <figure class="gallery__item gallery__item--7">
+          <img class="gallery__img" alt="menu-board" src="../img/FEND-coffee-list.png">
+        </figure>
+        <figure class="gallery__item gallery__item--8">
+          <img class="gallery__img" alt="coffee-latte-art" src="../img/FEND-Coffee-latte-art-3-quer.png">
+        </figure>
       </section>
 
       <!--KOMM VORBEI-->
@@ -155,7 +171,9 @@
   <footer class="footer">
     <section class="footer-text">
       <div class="footer-title">
-        <img src="../img/Logo.svg" alt="logo">
+        <a href="../index.html" class="logo-btn-home logo-btn-home--footer">
+          <img src="../img/Logo.svg" class="logo-btn-img" alt="logo">
+        </a>
         <p class="rust">Rustica</p>
         <p class="subhead">Café & Rösterei</p>
       </div>
