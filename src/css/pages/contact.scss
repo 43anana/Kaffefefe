@@ -1,0 +1,86 @@
+.header-form {
+    background-color:lightcoral;
+    height:100px;
+}
+
+.form {
+
+    width:86%;
+    margin:auto;
+
+    
+
+    &__form-elmnt {
+        margin:3rem 0;
+        display:flex;
+        flex-direction: column;
+    }
+}
+
+.form-spacing {
+    margin-bottom:4rem;
+}
+
+.underline {
+    border:none;
+    border-bottom:3px solid $color-black;
+    height:4rem;
+    &:focus:invalid{
+        background-color: #ff00005f;        //nur ein goodie, damit man direkt sieht wenn man schreibt, ob das format stimmt
+    }
+    &::placeholder {
+    color:$color-form-grey;
+    padding-left:6%;
+    }
+}
+
+.form-yourtext{                                 //bisschen nervig mit .underline aber mir fiel grad nichts schnelleres ein
+    border:none;
+    border-bottom: 3px solid $color-black;
+    &::placeholder {              //das ist jetzt auch nicht beautiful. woran orientiert es sich in der höhe? wenn ich pad-top:50% mache verschwindet es nämlcih
+        padding-left:6%;          //ich check jetz auch nicht ob es element oder class is, und ob ich prefixes brauche..https://css-tricks.com/almanac/selectors/p/placeholder/ 
+        padding-top:5rem;
+    }
+}
+
+#subject-select {
+    border:1px solid;
+    border-radius:0.5rem;
+    background-color: $color-anthra;
+    color:$color-white;
+    padding:1.5rem;             //könnte das auch wie bei den underlines über width machen, so rückt es aber direkt mit ein wie auf figma
+    margin-bottom:4rem;
+    >option {
+        &:first-child{
+            display:none;
+        }
+        &:nth-child(n+2){                           //selected alle ab dem 2. item
+            background-color:$color-white;
+            color:$color-black;
+            &:hover {                                   //funktioniert nicht..why? default blau..
+                background-color:$color-med-grey;
+            }
+        }
+    }
+}
+
+#submit-btn{                            //WARUM: ist wenn ich btn und btn-shop nehme mein text-feld ganze breite?
+    border:2px solid $color-anthra;
+    border-radius:5px;
+    text-align:center;
+    margin:auto;
+    
+}
+
+.form-pp >label {
+    padding-left:5%;                //WARUM GEHT :nth-child(2) HIER NICHT?????
+}
+
+
+//FÜR INVALID FELDER BEI SUBMIT:   ..weiß noch nich genau wies geht...ich bräuchte invalid aber erst wenn submit ..brauch ich JS?
+/*.underline:invalid ~ #submit-btn:keineahnung{
+    background-color: #ff00005f;
+    &::placeholder{
+        color:red;
+    }
+}*/

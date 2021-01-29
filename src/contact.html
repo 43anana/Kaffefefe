@@ -12,7 +12,7 @@
 
 <body>
     <!--HEADER-->
-    <header class="header">
+    <header class="header-form">
         <div class="topnav">
             <a href="./index.html" class="logo-btn-home logo-btn-home--header">
                 <img src=" img/Logo.svg" class="logo-btn-img" alt="logo">
@@ -52,21 +52,51 @@
                 </ul>
             </div>
         </div>
-        <div class="header__text">
-            <h1 class="title_primary">
-                <span class="title_primary--main">Rustica</span>
-                <span class="title_primary--sub">Bio und Fair seit 1991</span>
-            </h1>
-        </div>
-        <a class="btn btn-shop text-m--white" role="button" href="_shop/index.html">Zum Shop</a>
-
     </header>
 
     <main>
-        <h1>kontaktformular2be</h1>
+        <div class="form">
+            <h2>Du hast Fragen? <br> Schreib uns gern!</h2>
+            <!--MEINE H2 IST NICHT SO FETT WIE AUF FIGMA-->
+            <form class="form__form-elmnt text-m--black">
+                <label for="name">Name*</label>
+                <input type="text" name="name" id="name" class="underline form-spacing" value="" placeholder="Name"
+                    required>
+
+                <label for="mail">E-Mail*</label>
+                <input type="email" name="mail" id="mail" class="underline form-spacing" value="" placeholder="E-Mail"
+                    required>
+
+                <label for="phone">Telefonnummer</label>
+                <input type="tel" name="phone" id="phone" class="underline form-spacing" placeholder="Telefonnummer">
+
+                <label for="subject-select" class="visuallyhidden">Dein Betreff</label>
+                <select name="subject-select" id="subject-select">
+                    <!--fyi: label connects to id, name ist die reference für submitted info-->
+                    <option value="subject-headline">Dein Betreff</option>
+                    <option value="subject-shipping">Fragen zur Lieferung</option>
+                    <option value="subject-product">Fragen zum Produkt</option>
+                    <option value="subject-sales">Vertriebsfragen</option>
+                    <option value="subject-fnr">Einfach nur so!</option>
+                </select>
+                <label for="yourtext">Dein Text</label>
+                <textarea name="yourtext" id="yourtext" class="form-yourtext form-spacing text-m--black" rows="8"
+                    placeholder="was hast du auf dem Herzen?"></textarea>
+
+                <div class="form-pp form-spacing">
+                    <input type="checkbox" name="pp-accept" id="pp-accept">
+                    <label class="hi" for="pp-accept">Ich akzeptiere die Datenschutzerklärung</label>
+                </div>
+
+
+                <input type="submit" name="submit-btn" id="submit-btn" value="abschicken" class="btn btn-shop">
+
+            </form>
+        </div>
+
     </main>
 
-    <footer class="footer">
+    <footer class=" footer">
         <section class="footer-text">
             <div class="footer-title">
                 <a href="./index.html" class="logo-btn-home logo-btn-home--footer">
