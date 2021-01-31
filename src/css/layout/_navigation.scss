@@ -150,6 +150,7 @@
 
 
 
+
 //////////DESKTOP MENU
 .topnav-desktop {
   display:none;
@@ -203,6 +204,10 @@
     }
   }
   
+  //AKTIVE SEITE UNTERSTRICHEN
+  .currentpage {
+    border-bottom: 3px solid $color-white;
+  }
 
            /*hatte ich erst bei der normalen nicht after! border-bottom: 1px solid $color-white;
       border-width:0;

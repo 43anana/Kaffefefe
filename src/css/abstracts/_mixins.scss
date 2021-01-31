@@ -12,6 +12,7 @@ $breakpoint argument choices:
 if: makes a task and if result of it is true somethign happens :D
 */
 
+//ich brauch noch n mixin für kleiner 576, das sieht kacke aus über 375px
 
 @mixin respond($breakpoint) {
   @if $breakpoint == phone-land { 
