@@ -62,8 +62,10 @@
   display:flex;
   flex-direction:column;
   flex-wrap: wrap;
-  max-height: 1030px;
   align-items: flex-start;
+  max-height: 1030px;
+  //VORSCHLAG GIRLS: max-height:calc(100vh/2);
+  //column-count:2;
   // .gallery__item--4 {
   //   flex-basis: 100%;
   // }

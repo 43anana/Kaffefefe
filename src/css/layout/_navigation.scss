@@ -226,3 +226,12 @@
     top:0;
 }
 */
+
+
+.navbar-desktop{
+  transition:500ms ease;
+  background:blue;
+}
+.navbar-desktop.scrolled{
+  background:#000;
+}
