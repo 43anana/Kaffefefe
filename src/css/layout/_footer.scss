@@ -5,7 +5,7 @@ color:white;
 }
 
 .footer-text {
-    padding-top:10%;
+    padding-top:6.7rem;
     padding-bottom:10%;
     margin:auto;
     width:86%;
@@ -53,8 +53,15 @@ color:white;
         }
         @include respond (desk) {
             width:33%;
+            flex-direction:row-reverse;
             justify-content:flex-start;
             align-items:flex-start;
+        }
+
+        &__info {
+            display:flex;
+            flex-direction: column;
+            
         }
         &__nav {
             display:flex;

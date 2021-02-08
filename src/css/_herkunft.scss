@@ -40,15 +40,15 @@
   //NEUER BEREICH BRAUCH EIGENE SCSS PAGE
 .dassteckt{
   max-width:$max-width;
-  margin-top:10%;
-  margin-bottom:10%;
+  margin-top:10rem;
+  margin-bottom:10rem;
   margin-right:auto;
   margin-left:auto;
   // height:auto;
   text-align: center;
   >h2 {
     color:$color-black;
-    margin-bottom:10%;
+    margin-bottom:10rem;
     }
 
   &__flex{
@@ -58,7 +58,6 @@
 
     @include respond (desk) {    
       display:flex;
-      flex-direction: row;
       flex-wrap: wrap;
       align-items: center;
       justify-content: flex-end;
@@ -69,7 +68,7 @@
   &__icon-btn-box{
     width:100%;
     @include respond (desk) {
-    width:30%;              //die "restliche" Breite neben dem Bild
+    width:40%;              //die "restliche" Breite neben dem Bild
     height:auto;
     margin:auto;
     }
@@ -79,18 +78,18 @@
     display:flex;
     flex-direction:row;
     justify-content: space-between;
-    margin-top:10%;
+    margin-top:10rem;
     margin-left:auto;
     margin-right:auto;
     @include respond (desk) {
       flex-direction: column;
       flex-wrap: nowrap;
       margin:auto;
-      align-items: center;
+      align-items: flex-end;  //HÄÄÄÄÄÄ: ob hier end oder start steht verändert nix und ich verstehe nicht warum. wegen der margin-bottoms?
       
     }
   }
-}
+} 
 
   //kaffeebild
   .img-herkunft-blend {
@@ -109,21 +108,27 @@
       >img {
         margin-left:0;
       }
-      }
+    }
     
   }
 
-//MEEHR ICONS ..könnte man natürlich auch mit BEM machen
+//MEEHR ICONS ..lieber mit BEM machen? das ist der container je item+text
  .icon-mittext{
    display:flex;
    flex-direction:column;
-   margin-bottom:20%;   //KLARMACHEN 20% wovon!
+   margin-bottom:20rem;   //KLARMACHEN 20% wovon!
    align-items: center;
    justify-content: space-evenly;
    width:26%;
    @include respond (phone-land) {
       width:20%;
    } 
+   @include respond (desk) {
+     flex-direction:row;
+     justify-content:center;
+     width:100%;
+     //margin-left:16.6% was ca 175 px entspricht, wegen flex lass ich da aber einfch erst mal weg
+   }
   }
 
   .is-icon-box {
@@ -132,6 +137,11 @@
     margin-left:auto;
     margin-right:auto;
     margin-bottom:1rem;   //ÜBERPRÜFEN: kann justify-cont: space evenly/between bei elementen ohne definierte höhe nicht funktionierne?
+    @include respond (desk) {
+      width:10%; //Breite der Box des jeweiligen Items
+      margin-right:30px;
+      margin-left:0;
+    }
   }
   .is-icon {
       width: 100%;
@@ -141,53 +151,3 @@
   ja auch leicht verschoben,aber wenn es gewollt ist, kann ich die genauen Maße noch einfügen*/
 
   
-
-
-
-//KOMM VORBEI TEIL. braucht eigene scss file
-
-.visit{
-  padding-top:10%;    //mehr oder weniger habe ich das jetzt bei vielen der 
-  width:100%;
-  background-color: $color-white;
-  height:30rem;
-    @include respond (desk) {
-      height:57.5rem;
-    }
-    
-  &__text {  
-  width:86%;
-  margin:auto;    //remember:das geht nicht bei inline-block
-  
-    >h2 {
-      color:$color-black;
-      margin-bottom:3.5rem;
-    }
-  }
-  
-  &__map {
-    width:100%;
-    height:100%;
-    >iframe {
-      height:77%; //relative höhe im container komm vorbei
-      width:100%;
-    }
-    @include respond (desk) {    
-      height: 85%;
-      width:100%;
-      
-    }
-    &--bigger {      
-      display:block;           
-      color:$color-anthra;
-      text-align: center;
-      margin-bottom:2%;
-      text-transform: uppercase;
-      text-decoration: none;
-      &:hover {
-        font-weight: 600;
-      }
-    }
-  }
-}
-

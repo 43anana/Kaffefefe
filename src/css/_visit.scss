@@ -1,0 +1,31 @@
+//KOMM VORBEI TEIL. 
+
+.visit{
+    padding-top:10%;    //mehr oder weniger habe ich das jetzt bei vielen der 
+    width:100%;
+    background-color: $color-white;
+      
+      
+    &__text {  
+    width:86%;
+    margin:auto;    //remember:das geht nicht bei inline-block
+    
+      >h2 {
+        color:$color-black;
+        margin-bottom:3.5rem;
+      }
+    }
+    
+    &__map {
+      width:100%;
+      >iframe {
+        height:50vh; //77% relative höhe im container komm vorbei
+        width:100%;
+      }
+      @include respond (desk) {    
+        height: 85%;
+        width:100%;
+      }
+    }
+  }
+  

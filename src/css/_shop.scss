@@ -12,17 +12,17 @@
         flex-wrap: nowrap;      
         >h2{
           color:#fff;
-          margin-bottom:40px;
-          margin-top:60px;
-          line-height: 34px;
+          margin-bottom:4rem;
+          margin-top:6rem;
+
           @include respond (desk) {
-            line-height: 5.6rem;  //auch von figma, normalerweise hat die h2 1.1%
-            justify-content: space-between;
+            margin-right: 63%;//auf figma 67.5% aber mw desktop geht bei 1200 schon los und es bricht sonst zu spät um
+            margin-bottom:8rem;
+            margin-top:12.5rem;
           }
         }
         >a {
-          margin-bottom:60px;
-          margin-top:40px;
+          margin-bottom:6rem;
         }
         @include respond (desk) {
           justify-content: space-between;
@@ -45,20 +45,23 @@
         }
 
         &--preview{
-          width: 49%;
+          width: 47.5%;
+
           .subhead {
-            margin-top:11px;
+            margin-top:1rem;
+            margin-bottom:0.7rem
           }                         //eeeyy wieso macht weder subhead noch img das -.-
           >div{
-            margin-bottom:11px;
+            margin-bottom:1rem;
           }
-          &:nth-child(odd){
-            margin-right:1%;
+          &:nth-child(odd){     //Kaffee 1 und 3
+            margin-right:5%;
+            margin-bottom:4rem;
           }
-          &:nth-child(even) {
+          &:nth-child(even) {   //Kaffee 2 und 4    --> d.h. wenn ich nth child auf die preview anwende, wählt es von allen 4 divs die diese klasse haben aus, nicht von child-e´s
             margin:0;
           }
-          
+
           @include respond (desk) {
             width:24%;
             &:nth-child(even) {margin-right:0.5%;}
@@ -83,6 +86,7 @@
     display:flex;
     flex-direction:row;
     align-items: flex-end;
+    margin-top:0.7rem;
   }
 
   .shop__svg {

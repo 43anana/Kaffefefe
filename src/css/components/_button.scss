@@ -41,36 +41,34 @@
 
 //noch umbenennen in btn-dark
 .btn-shop {
-  background:#1A1A1A;    
-  //width:16.3rem;
- // height:4rem;
+  background:linear-gradient(to right,  $color-btn-dark-hover 50%, #1A1A1A 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;    //für eine animation braucht es background, size, position und transition
+  transition: all .5s ease-out;
   color:#fff;
-  /*display:inline-block;
-  position:absolute;            //alles weg weil jetzt FLEXBOX im header
-  top: 39.8rem;
-  left:10.6rem;*/
   text-align:center;
   padding:1.5rem 5rem 1.5rem 5rem;
   &:hover{
-    background-color:$color-btn-dark-hover;
+    background-position: left bottom;
   }
   &:active{
-    background-color:$color-btn-active;
+    background:$color-btn-active;     //wieso muss ich da eig background und nicht -color nehmen????
   }
 }
 
 //wir machen jetzt kurz aus Zeitgründen ein btn-shop2 --> aber den header noch flexbox anpassen!//
 
 .btn-shop2 {
-  background:#1A1A1A;
- // width:16.3rem;
- // height:4rem;
+  background: linear-gradient(to right, $color-btn-dark-hover 50%, #1A1A1A 50%);
+  background-size:200% 100%;
+  background-position:bottom right;
+  transition:all 0.5s ease-out;
   color:#fff;
   margin-top:4rem;
   padding:1.5rem 5rem 1.5rem 5rem;
   text-align:center;
   &:hover{
-    background-color:$color-btn-dark-hover;
+    background-position:left bottom;
   }
   &:active{
     background-color:$color-btn-active;
@@ -81,18 +79,26 @@
   //BUTTON HELL UMBENENNEN..nich das er hell wäre
   .btn-products {
     color:#fff;
-    background: none; //bei elements ist der button weiß, aber bei vorschau nicht?!
+    background: linear-gradient(to right, rgba($color-btn-active, 0.3)50%, rgba(0, 0, 0, 0) 50%);
+    background-size:200% 100%;
+    background-position:right bottom;
+    transition: all 0.5s ease-out;
     border-style:solid;
     border-width:3px;
     border-color:#fff;
     margin-left:auto;
-    margin-right:auto;   //die margins zentrieren!//
+    margin-right:auto;   
     text-align:center;
-    //width:182px;
-    //height:48px;
     padding:15px 50px 15px 50px;
+
+    &:hover{
+      background-position:left bottom;
+    }
+    &:active {
+      background-color: $color-btn-active;
+    }
   }
-    //position:absolute;  top:398px;  left:106px;//
+   
 
       //auf figma habe ich bei elements diese angabe für hover gefunden: box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.25); 
       //dann bräuchte ich aber auch:       &:hover{ color:black; }

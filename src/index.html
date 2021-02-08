@@ -42,14 +42,14 @@
       </div>
 
 
-      <div class="topnav-desktop">
+      <nav class="topnav-desktop">
         <ul class="topnav-desktop__list">
           <li class="topnav-desktop__item"><a href="_cafe-page/index.html" class="topnav-desktop__link">Das Café</a>
           </li>
           <li class="topnav-desktop__item"><a href="_herkunft/index.html" class="topnav-desktop__link">Herkunft</a></li>
           <li class="topnav-desktop__item"><a href="_shop/index.html" class="topnav-desktop__link">Shop</a></li>
         </ul>
-      </div>
+      </nav>
     </div>
     <div class="header__text">
       <h1 class="title_primary">
@@ -81,7 +81,7 @@
           </div>
         </div>
         <div class="cafe__img-box">
-          <img alt="cafe-img" src="img/FEND-Coffee-shop.png">
+          <img alt="café-img" srcset="img/FEND-Coffee-shop.png 1x, img/FEND-Coffee-shop-2x.png 2x">
         </div>
       </section>
 
@@ -104,7 +104,7 @@
     <!--SHOP PREVIEW-->
     <div class="shop">
       <div class="shop__outline">
-        <!--das muss geiler gehen mti den ähnlichne ovn oben!-->
+        <!--das muss geiler gehen mti den ähnlichen von oben!-->
         <div class="shop__content">
           <h2>Entdecke unsere Kaffeesorten</h2>
 
@@ -359,32 +359,33 @@
     <!--DAS STECKT DRIN-->
     <section class="dassteckt">
       <h2>Das steckt drin</h2>
-      <div class="dassteckt__flex">
+      <div class="dassteckt__flex">   <!--flext das image nach links und die items+text nach rechts-->
         <div class="img-herkunft-blend">
           <img srcset="img/FEND_Coffee_Costa-Rica-1x.png 1x, img/FEND_Coffee_Costa-Rica-2x.png 2x" alt="blend-img">
         </div>
+
         <div class="dassteckt__icon-btn-box">
           <!--ICON + TEXT INHALT KAFFEE-->
           <div class="dassteckt__icons">
             <div class="icon-mittext">
-              <div class="is-icon-box">
+              <div class="is-icon-box">     <!--ggf. noch svg+symbol nutzen falls öfter auftaucht-->
                 <img class="is-icon" src="img/Icon-Kaffee-Tasse.svg" alt="coffee-cup-img">
               </div>
-              <p class="text-m">Bester <br>Geschmack</p>
+              <p class="text-m--black">Bester <br>Geschmack</p>
             </div>
 
             <div class="icon-mittext">
               <div class="is-icon-box">
                 <img class="is-icon" src="img/Icon-Kaffee-Schaufel.svg" alt="coffee-shovel-img">
               </div>
-              <p class="text-m">Fair <br>gehandelt</p>
+              <p class="text-m--black">Fair <br>gehandelt</p>
             </div>
 
             <div class="icon-mittext">
               <div class="is-icon-box">
                 <img class="is-icon" src="img/Icon-Kaffee-Pflanze.svg" alt="coffee-plant-img">
               </div>
-              <p class="text-m">Bio <br> Qualität
+              <p class="text-m--black">Bio <br> Qualität
               </p>
               <!--unschön mit br oder!?-->
             </div>
@@ -406,9 +407,7 @@
       <div class="visit__map">
         <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
           src="https://www.openstreetmap.org/export/embed.html?bbox=10.118724703788759%2C54.34034445733928%2C10.125805735588076%2C54.34332778443026&amp;layer=mapnik&amp;marker=54.3418361479485%2C10.122265219688416">
-        </iframe><br><small><a class="visit__map--bigger"
-            href="https://www.openstreetmap.org/?mlat=54.34184&amp;mlon=10.12227#map=18/54.34184/10.12227">
-            Größere Karte anzeigen</a></small>
+        </iframe>
       </div>
       <!--AKTUELL IST MEINE MAP NICHTIN DER GEWOLLTEN WIDTH. why?-->
     </section>
@@ -435,15 +434,17 @@
         </p>
       </div>
       <div class="footer-links text-m--imp">
-        <span class="footer-links__nav">
+        <nav class="footer-links__info">
+          <a href="/impressum.html" class="footer-links__style">Impressum</a>
+          <a href="impressum.html/#privacypolicy" class="footer-links__style"
+            alt="link-to-privacy-policy">Datenschutz</a>
+          <a href="contact.html" class="footer-links__style" alt="contact-form">Kontaktformular</a> 
+        </nav>
+        <nav class="footer-links__nav">
           <a href="_cafe-page/index.html" class="footer-links__style">Das Café</a>
           <a href="_shop/index.html" class="footer-links__style">Shop</a>
           <a href="_herkunft/index.html" class="footer-links__style">Herkunft</a>
-        </span>
-        <span><a href="/impressum.html" class="footer-links__style">Impressum</a>
-          <br><a href="impressum.html/#privacypolicy" class="footer-links__style"
-            alt="link-to-privacy-policy">Datenschutz</a>
-          <a href="contact.html" class="footer-links__style" alt="contact-form">Kontaktformular</a> </span>
+        </nav>
       </div>
     </section>
   </footer>

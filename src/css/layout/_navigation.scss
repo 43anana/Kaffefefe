@@ -76,7 +76,7 @@
   &__checkbox:checked ~ &__background {
     //~ ist ein sibling
     visibility:visible;     //das muss ich machen, weil meine burgerbox keinen hintergrund oben hat, d.h.man sieht sonst n schwarzes ding
-    transform: scale(300); //vergrößert background.
+    transform: scale(600); //vergrößert background....z.b. ist 300 zu klein wenn ich ein sehr langes dünnes desing hab
   }
   //wenn ich background wegnehme öffnet sich kein schwarzes fenster mehr, wenn background drin und hierunter op und width
   //weiterhin null:

@@ -13,6 +13,7 @@ html {
   (damit:10 = 1 rem). für user friendly nehmen wir aber: 10:16=62.5% =10 px falls default 16px
   merke:rem geht bei vielen alten explorern nicht*/
 
+  /* das macht nur Sinn wenn wir nicht schon vorgeschriebene schriftgrößen haben
   @include respond(phone-land) {
     font-size: 50%; //1 rem = 8px; 8/16=50%
   }
@@ -28,6 +29,7 @@ html {
   @include respond(xxl-desk) {
     font-size: 87.5%; //1rem = 14 px, 14/16=87.5%
   }
+  */
 }
 
 body {
