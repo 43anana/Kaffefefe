@@ -1,11 +1,17 @@
-import myFunction, { multiply } from "./myModule";
+// import myFunction, { multiply } from "./myModule";
 
-myFunction();
+// myFunction();
 
-const result = multiply(2, 5);
+// const result = multiply(2, 5);
 
-console.log(result);
+// console.log(result);
 
-$(window).scroll(function () {
-  $("nav").toggleClass("scrolled", $(this).scrollTop() > 50);
-});
+import navigation from "./navigation";
+
+navigation();
+
+// import shop from "./shop";
+// shop();
+
+// const submit = document.querySelector(`.submit`);
+// submit.addEventListener(`click`, `Hi`);

@@ -228,10 +228,60 @@
 */
 
 
-.navbar-desktop{
-  transition:500ms ease;
-  background:blue;
-}
-.navbar-desktop.scrolled{
-  background:#000;
-}
+.topnav-desktop2 {
+  display:none;
+  width:100%;
+  @include respond (tablet) {
+    display: inline;
+    margin-right:0;
+    padding-right:7%;
+    padding-left:6%;
+    position:fixed;
+    top:2rem;
+    &--scroll {
+      background-color:$color-white;
+      > ul li a {color:$color-black;
+      }
+    }
+  }
+    &__list {
+      display:flex;
+      justify-content: flex-end;
+      align-items:center;
+    }
+    &__item {
+      padding-left:10%;
+      list-style-type: none;
+    }
+    &__link {
+      font-weight: 500;
+      font-size:1.8rem;
+      color:$color-white;
+      text-decoration: none;
+      font-weight: 500;
+      font-size:1.8rem;
+      color:$color-white;
+      text-decoration: none;
+      position:relative;
+      &::after {        //PRINZIP: erstelle after-Klasse mit der border bottom, positioniere sie, gib ihr transition, gib hover nur auf after! 
+        content:"";
+        border-bottom:1px solid $color-white;
+        width:0;
+        height:100%;
+        transition:width 0.8s;
+        display:inline-block;
+        position: absolute;
+        left: 0;
+        top:0.3rem;
+      }
+        &:hover::after {      //  FRAGE: warum funzt es nicht, wenn ich den hover einfach bei ::after reinschreibe?
+          width:100%;
+        }
+      
+        &:active {
+          border-bottom:1px solid $color-white;
+        }
+
+    }
+  }
+  
