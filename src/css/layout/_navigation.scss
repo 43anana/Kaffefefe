@@ -163,6 +163,12 @@
     position:fixed;
     top:2rem;
     }
+    &__scroll {
+        background-color:$color-black;
+        > ul li a {
+            color:$color-white;
+        }
+    }
     &__list {
       display:flex;
       justify-content: flex-end;
