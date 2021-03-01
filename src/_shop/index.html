@@ -11,13 +11,52 @@
 </head>
 
 <body>
-  <p>yolo</p>
-  <a href="/">Home</a>
-  <div class="giphy">
-    <iframe class="giphy__responsive" src="https://giphy.com/embed/TdvLcceTQeEBZK88OH" title="coffee-shop"
-      alt="coffee-shop-giphy"></iframe>
-    <!--funktionert zwar grad nicht aber irgendwie nicht thema grad:D-->
+  <!--  <div class="wrapper">-->
+  <!-- <include src="templates/header.html"></include> -->
+  <h2>Entdecke unsere Kaffeesorten</p>
+<main>
+  <div class="products">
+    <div id="loading">dich baue ich bestimmt noch ;-)</div>
   </div>
+</main>
+
+<!--DIE SIND BEIDE NOCH NICHT RELATIVE-->
+<!-- <include src="templates/footer.html"></include-->
+  <footer class="footer">
+    <section class="footer-text">
+      <div class="footer-title">
+        <a href="../index.html" class="logo-btn-home logo-btn-home--footer">
+          <img src="../img/Logo.svg" class="logo-btn-img" alt="logo">
+        </a>
+        <p class="rust">Rustica</p>
+        <p class="subhead">Café & Rösterei</p>
+      </div>
+
+      <div class="address--imp text-m--imp">
+        <p>Komm uns besuchen!
+          <br>Fraunhoferstr. 13, Kiel
+        </p>
+        <p>Mo – Fr 8–18 Uhr
+          <br>Sa 11–18 Uhr
+        </p>
+      </div>
+      <div class="footer-links text-m--imp">
+        <nav class="footer-links__info">
+          <a href="../impressum.html" class="footer-links__style">Impressum</a>
+          <a href="../impressum.html/#privacypolicy" class="footer-links__style"
+            alt="link-to-privacy-policy">Datenschutz</a>
+          <a href="../contact.html" class="footer-links__style" alt="contact-form">Kontaktformular</a> 
+        </nav>
+        <nav class="footer-links__nav">
+          <a href="../_cafe-page/index.html" class="footer-links__style">Das Café</a>
+          <a href="." class="footer-links__style">Shop</a>
+          <a href="../_herkunft/index.html" class="footer-links__style">Herkunft</a>
+        </nav>
+      </div>
+    </section>
+  </footer>
+  <script src="../js/index.js"></script>
+  <script src="../js/shop.js"></script>
 </body>
 
 </html>

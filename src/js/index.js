@@ -10,8 +10,13 @@ import navigation from "./navigation";
 
 navigation();
 
-// import shop from "./shop";
-// shop();
+import shop, { meineZahl, prepareShop } from "./shop";
+shop();
+
+meineZahl();
+
+prepareShop();
+
 
 // const submit = document.querySelector(`.submit`);
 // submit.addEventListener(`click`, `Hi`);

@@ -32,22 +32,21 @@ function handleCartButtonClick(event) {
 
 function shop() {
   const productContainer = document.querySelector(".products");
-  const productTemplate = `
-   ${products
-     .map(
-       (product) => `
-    <div class="product">
-      <h3 class="headline">${product.productName}</h3>
-      <div class="description">${product.description}</div>
-      <div class="price">${product.price / 100}€</div>
-      <button class="add-to-cart-button" data-product-id="${
-        product.id
-      }">Add to cart</button>
-    </div>
-   `
-     )
-     .join("")} 
-  `;
+  const productTemplate = products.map(
+       (product) => {
+         console.log(product);
+         return `
+         <div class="product">
+           <h3 class="headline">${product.productName}</h3>
+           <div class="description">${product.description}</div>
+           <div class="price">${product.price / 100}€</div>
+           <button class="add-to-cart-button" data-product-id="${
+             product.id
+           }">Add to cart</button>
+         </div>
+        `;
+       }
+     );
 
   productContainer.innerHTML = productTemplate;
 
