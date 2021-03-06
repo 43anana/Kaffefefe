@@ -4,19 +4,16 @@
 
 // const result = multiply(2, 5);
 
-// console.log(result);
-
 import navigation from "./navigation";
+import shop, { shopTest, meineZahl } from "./shop";
 
 navigation();
 
-import shop, { meineZahl, prepareShop } from "./shop";
 shop();
 
+shopTest();
+
 meineZahl();
-
-prepareShop();
-
 
 // const submit = document.querySelector(`.submit`);
 // submit.addEventListener(`click`, `Hi`);

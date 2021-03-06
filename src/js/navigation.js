@@ -4,11 +4,17 @@
 
 //products.map(function(product) {return ``;})
 // products.map(product => 1 + 2)
+function desktopScroller () {
 const navbarDesk = document.querySelector(`.topnav-desktop`);
 const header = document.querySelector(`.header`);
 const footer = document.querySelector(`.footer`);
 const articleAll = document.querySelectorAll(`article`);
 const scrollElements = [...articleAll, header, footer];
+const logoId = document.getElementById(`header-logo-svg--white`);
+const logoIdPath = document.querySelectorAll(`#header-logo-svg--white path`);
+console.log(logoIdPath);
+
+//gibt uns jetzt ein array mit den beiden paths vom logo aus
 
 //wo treffen a und b aufeinander? a=navbarDesk, b=mein jeweiliges scrollElement, also articles+header+footer
 //SOURCE https://github.com/Barry127/intersect-rect/blob/master/intersect-rect.js
@@ -29,13 +35,21 @@ window.onscroll = function ()
 			if (scrollElement.classList.contains("darkScrollNav")) {
 				console.log("dark", scrollElement);
 				navbarDesk.classList.add(`topnav-desktop--scroll`);
+				logoId.classList.add(`logo-black`);
+				logoIdPath[0].setAttribute("fill", "red");
+				logoIdPath[1].setAttribute("fill", "red");
+				
 			} else {
 				navbarDesk.classList.remove(`topnav-desktop--scroll`);
+				logoId.classList.remove(`logo-black`);
 				console.log("light", scrollElement);
 			}
 		}
 	});
 };
+}
+
+export default desktopScroller;
 //d.h.: wenn ich scrolle,
 //dann soll für jedes meiner scrollElements abgefragt werden..
 //ob es die Klasse darkScrollNav beinhaltet,
