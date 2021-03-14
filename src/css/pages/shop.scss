@@ -1,3 +1,23 @@
+.products{
+    display:flex;
+    &:first-child{
+        width:50%;
+    }
+}
+
+
 .headline {
     color:blue;
+}
+
+.shop-image{
+
+}
+
+.price{
+
+}
+
+.add-to-cart-button{
+
 }

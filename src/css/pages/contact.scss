@@ -33,9 +33,9 @@
     border:none;
     border-bottom:3px solid $color-black;
     height:4rem;
-    &:focus:invalid{
-        background-color: #ff00005f;        //nur ein goodie, damit man direkt sieht wenn man schreibt, ob das format stimmt
-    }
+    // &:focus:invalid{
+    //     background-color: #ff00005f;        //nur ein goodie, damit man direkt sieht wenn man schreibt, ob das format stimmt
+    // }
     &::placeholder {
     color:$color-form-grey;
     padding-left:6%;
@@ -86,9 +86,11 @@
 
 
 //FÜR INVALID FELDER BEI SUBMIT:   ..weiß noch nich genau wies geht...ich bräuchte invalid aber erst wenn submit ..brauch ich JS?
-/*.underline:invalid ~ #submit-btn:keineahnung{
+.form-validation {
     background-color: #ff00005f;
-    &::placeholder{
-        color:red;
-    }
-}*/
+    color:red;
+}
+.form-validation--checkbox {
+    border-bottom:2px solid #ff00005f;
+    color:red;
+}

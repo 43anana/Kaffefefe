@@ -13,21 +13,21 @@
 import products from "./products.json";
 import productImages from "../img/*.png";
 
-
 /*eslint-disable*/
 
-// function fillTemplateImg (product) {
+// function fillTemplateImgLukas (product) {
 //     return `
 //     <img src="${productImages[product.image]}"
 //     alt="eine Tüte unseres Kaffees der Sorte ${product.productName}"
 //   />
 // `
 // }
-// function  Lukas {
+// function Lukas {
 // const productTemplates = products.map(fillTemplate).join("");
 // const shopi = document.querySelector(".products");
-// shopi.innerHTML = productTemplates;
-// }
+// shopi.innerHTML = productTemplatesImgLukas;
+// } ..hab ich da jetzt imglukas falcsh hinzugefügt? :D 
+
 
 function handleCartButtonClick(event) {
     const productId = parseInt(this.dataset.productId, 10);
@@ -163,8 +163,10 @@ console.log(findBrazil);
 
 //const result = inventory.find( ({ name }) => name === 'cherries' );
 
-
-export const meineZahl = 1;
+export function test (){
+    const meineZahl=1;
+    console.log(meineZahl);
+}
 
        //ich will in der anderen datei den shop aufrufen
       export default shop;

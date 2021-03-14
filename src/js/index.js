@@ -3,17 +3,17 @@
 // myFunction();
 
 // const result = multiply(2, 5);
-
+import formValid from "./contact";
 import navigation from "./navigation";
-import shop, { shopTest, meineZahl } from "./shop";
+import shop, { test } from "./shop";
 
 navigation();
 
 shop();
 
-shopTest();
+test();
 
-meineZahl();
+formValid();
 
 // const submit = document.querySelector(`.submit`);
 // submit.addEventListener(`click`, `Hi`);
